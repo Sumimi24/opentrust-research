@@ -9,9 +9,9 @@ let DATA;
 
 function renderResults(){
  const d=DATA.protocol,c=d.completion;
- $('study-status').textContent=`已完成并核对：${c.independent_specs} 个独立规格场景；${c.actual_calls.toLocaleString()} 次正式文本调用。接口失败按冻结规则保留。`;
- $('headline-stats').innerHTML=[[c.independent_specs,'文本独立规格场景'],c.candidates? [c.candidates,'自然产生的分析答案']:[0,'分析答案'],[c.reviews,'全交叉审核结果'],[DATA.rtl.summary?.initial_cases||'待完成','开源 RTL 初始修复例']].map(([n,t])=>`<div><b>${n.toLocaleString()}</b><span>${t}</span></div>`).join('');
- $('protocol-meta').innerHTML=['120 规格 · 240 轨迹','30 校准规格 / 90 测试规格','4 个分析模型 · 3 个审核模型','另有 720 次盲解对照','每条分析单次调用 · 无静默重试'].map(x=>`<span>${x}</span>`).join('');
+ $('study-status').textContent=`已完成并核对：${c.independent_specs} 个生成场景，${DATA.scope.unique_parameter_configurations} 种参数配置；${c.actual_calls.toLocaleString()} 次正式文本调用。接口失败按冻结规则保留。`;
+ $('headline-stats').innerHTML=[[c.independent_specs,'文本生成场景（51 种参数配置）'],c.candidates? [c.candidates,'自然产生的分析答案']:[0,'分析答案'],[c.reviews,'全交叉审核结果'],[DATA.rtl.summary?.initial_cases||'待完成','开源 RTL 初始修复例']].map(([n,t])=>`<div><b>${n.toLocaleString()}</b><span>${t}</span></div>`).join('');
+ $('protocol-meta').innerHTML=['120 场景 · 51 参数配置 · 240 轨迹','30 校准场景 / 90 测试场景','4 个分析模型 · 3 个审核模型','另有 720 次盲解对照','参数可重复，全部轨迹不同','每条分析单次调用 · 无静默重试'].map(x=>`<span>${x}</span>`).join('');
  $('calls-meta').textContent=`正式调用 ${d.calls.actual.toLocaleString()} 次：完整返回 ${d.calls.statuses.complete} 次，网络失败 ${d.calls.statuses.transport_error||0} 次。API 报告 ${d.calls.usage.total_tokens.toLocaleString()} tokens；另有两轮 pilot 共 456 次调用，单独保留。全交叉采集费用与单条部署路线费用分开，未核验单价时不报告金额。`;
  $('producer-bars').innerHTML=Object.entries(d.producers).map(([m,r])=>`<div class="bar-row"><span>${esc(short[m])}</span><div class="bar-track"><div class="bar-fill" style="width:${100*r.correct/r.n}%"></div></div><span>${r.correct}/${r.n} · ${pct(r.correct/r.n)}</span></div>`).join('');
  let html='<caption>独立测试集配对漏检率 φ，分母为该生产者的错误答案</caption><thead><tr><th>生产者 ↓ / 审核者 →</th>'+DATA.reviewers.map(m=>`<th>${esc(short[m])}</th>`).join('')+'</tr></thead><tbody>';
@@ -70,4 +70,4 @@ function renderCase(){
 }
 
 $('family-filter').addEventListener('change',renderRoutes);
-fetch('assets/data.json').then(r=>{if(!r.ok)throw Error('data unavailable');return r.json();}).then(d=>{DATA=d;renderResults();}).catch(()=>{$('study-status').textContent='实验数据尚未就绪或暂时无法加载。请从 GitHub 仓库检查已完成的审计材料。';});
+fetch('assets/data.json').then(r=>{if(!r.ok)throw Error('data unavailable');return r.json();}).then(d=>{DATA=d;renderResults();}).catch(error=>{console.error(error);$('study-status').textContent='实验数据尚未就绪或暂时无法加载。请从 GitHub 仓库检查已完成的审计材料。';});

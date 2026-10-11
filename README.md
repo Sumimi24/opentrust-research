@@ -6,7 +6,7 @@ The website is in `docs/` and is intended for GitHub Pages. It presents a single
 
 ## New experiments
 
-* Synthetic bounded protocols: transaction commit, resource leases, request/acknowledgment. 120 independently seeded specifications, 240 traces, four producer interfaces, three reviewer interfaces, plus blind independent analysis. 30 specifications are calibration only; 90 are test only. The full planned matrix contains 4,560 model calls.
+* Synthetic bounded protocols: transaction commit, resource leases, request/acknowledgment. 120 independently seeded scenarios covering 51 unique parameter configurations, 240 distinct traces, four producer interfaces, three reviewer interfaces, plus blind independent analysis. 30 scenarios are calibration only; 90 are test only. Parameter values overlap the splits; this evaluates fresh seeded traces within the protocol families, not unseen-parameter generalization. The full planned matrix contains 4,560 model calls.
 * Open-source RTL integration repair: DMA writer, UDP receive guard, instruction-cache controller. Three pinned core projects; 18 functionally qualified injected wrapper faults; 72 initial repairs and same/cross-family paired continuation routes, each capped at three total model calls.
 
 These are separate studies. Protocol analysis accuracy is not RTL correctness, and injected wrapper faults are not historical upstream bugs. Cases, API calls, seed replays, and independent projects must not be used interchangeably as sample counts.
@@ -17,6 +17,7 @@ Use Python 3 with the standard library:
 
 ```text
 python reproduce_protocol.py
+python reproduce_rtl_results.py
 ```
 
 The script rechecks all 240 truths with two CPU implementations, verifies the 960 saved candidate labels, and reruns the frozen calibration-only route analysis and specification-cluster bootstrap. It does **not** call models or repeat RTL simulations. API metadata in `research/protocol_formal/api_attempts_metadata.jsonl` omits repeated request payloads; the full original records and frozen sources are retained in the downloadable `docs/assets/protocol-study.zip`.
@@ -36,6 +37,8 @@ Experimental API credentials were loaded privately in memory and are not publish
 One transport-error response lacked a `text` field and interrupted input assembly. Execution resumed using an empty proposal for that existing failed call, without retrying it or changing successful outputs. The original runner and execution revision record remain in the archive. A broader-domain CPU check later corrected handling of negative initial timestamps and negative deadlines; **all 240 actual task labels were unchanged**, verified against both frozen and corrected implementations.
 
 The RTL environment used Linux CPU simulation, Python 3.10, cocotb 1.9.2, Icarus 12 and Verilator 5.032. Compilation adaptations for the owner's OSS filesystem are environment-specific. Original scores/logs support the reported execution; offline result replay should not be called a fresh hardware simulation. No GPU was used or controlled.
+
+The second reproduction command requires the completed RTL archive in `docs/assets/rtl-repair-study.zip`. It checks the 216 saved route rows, source identities, selection before independent testing, seed sets, qualification records and actual call accounting. It does not compile or simulate hardware. The archive also retains the pinned upstream archives, frozen contracts, wrapper sources, test code and compiler adaptations. Experimental runners retain their original machine-specific paths for provenance; rerunning API or RTL execution requires configuring those paths and installing the listed CPU tools. No credentials are included.
 
 ## Sources and licenses
 

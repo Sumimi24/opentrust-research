@@ -1,0 +1,55 @@
+{
+  "post_hoc_diagnostic": true,
+  "scenario_clusters": 120,
+  "traces": 240,
+  "unique_traces": 240,
+  "unique_parameter_configurations": 51,
+  "families": {
+    "transaction": {
+      "scenario_clusters": 40,
+      "traces": 80,
+      "unique_parameters": 9,
+      "calibration_parameters": 6,
+      "test_parameters": 9,
+      "shared_parameters": 6,
+      "event_count_range": [
+        24,
+        241
+      ]
+    },
+    "lease": {
+      "scenario_clusters": 40,
+      "traces": 80,
+      "unique_parameters": 20,
+      "calibration_parameters": 8,
+      "test_parameters": 17,
+      "shared_parameters": 5,
+      "event_count_range": [
+        24,
+        169
+      ]
+    },
+    "request": {
+      "scenario_clusters": 40,
+      "traces": 80,
+      "unique_parameters": 22,
+      "calibration_parameters": 9,
+      "test_parameters": 17,
+      "shared_parameters": 4,
+      "event_count_range": [
+        18,
+        230
+      ]
+    }
+  },
+  "test_answer_field_errors": {
+    "valid+first_bad_event+rule": 180,
+    "all_fields_correct": 504,
+    "first_bad_event+rule": 23,
+    "rule": 4,
+    "first_bad_event": 8,
+    "unparseable_or_interface_failure": 1
+  },
+  "generalization_scope": "New seeded event traces within the specified protocol families; parameter values overlap calibration and test. Not an unseen-parameter or unseen-project evaluation.",
+  "selection_changed": false
+}
