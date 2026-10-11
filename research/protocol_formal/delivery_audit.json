@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "original_truth_agreement_cases": 240,
+  "independent_recheck_cases": 240,
+  "negative_time_and_expiry_boundary_checks": 4,
+  "api_response_bindings": 4560,
+  "unique_call_tags": true,
+  "labels_not_present_in_requests": true,
+  "all_failures_retained": true,
+  "credential_scan": true,
+  "CPU_only": true,
+  "GPU_used": false,
+  "evaluator_revision": "Initial-time and negative-deadline generalization corrected after collection; all 240 actual labels unchanged. Original frozen evaluator and execution schema fix preserved.",
+  "evaluator_source_sha256": "70cf69c9ffd3e88b40a55e4fdedeb15722b90fca335a7eb34e6a1e570c7da324"
+}

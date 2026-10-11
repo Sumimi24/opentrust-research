@@ -1,0 +1,11 @@
+{
+  "analysis_source_sha256": "2173a7746b6e5426c9cb5a386764f0d948f85fb5dc8c3afdc72c5009c067a130",
+  "frozen_at_utc": "2026-10-11T17:24:00Z",
+  "test_results_inspected": false,
+  "bootstrap_repetitions": 2000,
+  "random_route": "sha256(case|producer) modulo reviewer_count",
+  "all_three_rule": "accept only if every reviewer accepts; 3 calls, separate cost",
+  "recorded_at_utc": "2026-10-11T17:26:34.064625+00:00",
+  "primary_selection_rule_frozen_in_protocol_before_calls": true,
+  "ancillary_comparisons_frozen_before_result_inspection": true
+}

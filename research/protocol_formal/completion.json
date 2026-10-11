@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "cases": 240,
+  "independent_specs": 120,
+  "candidates": 960,
+  "reviews": 2880,
+  "blind_solves": 720,
+  "actual_calls": 4560,
+  "statuses": {
+    "complete": 4557,
+    "transport_error": 3
+  },
+  "seconds": 495,
+  "frozen_inputs_unchanged": true
+}

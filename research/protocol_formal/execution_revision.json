@@ -1,0 +1,5 @@
+{
+  "runner_sha256": "5f02761ee73933d26455ad70e23d9ace2373d802439a39a1b2656a6c25a97ae3",
+  "recorded_at_utc": "2026-10-11T17:35:02.230522+00:00",
+  "reason": "One preserved transport-error producer response lacks text. Original runner stopped during review input assembly. Use empty proposal text for that failed response, retain production failure and all existing API outcomes, no repeated API calls. Frozen protocol inputs and prompts unchanged."
+}
