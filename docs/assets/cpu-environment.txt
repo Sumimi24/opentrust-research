@@ -1,0 +1,41 @@
+OpenTrust子系统实验：CPU环境与开源复现记录
+
+执行范围
+服务器8.130.97.174:1014，以liuyue身份登录成功。永久实验文件均位于/mnt/oss/liuyue/opentrust_subsystems_v01_20261011。旧实验的Icarus工具只读复用，未改动其他用户OSS目录。全过程采用CPU仿真与API调用，没有查询、停止或占用GPU进程。SSH密码通过交互输入留在进程内存，API密钥从本机现有DPAPI配置解密，不写入候选、协议或调用记录。
+
+已核验工具
+服务器Python 3.10.12、gcc/g++ 11.4.0、GNU make 4.3、Perl 5.34.0。
+DMA/UDP采用已有实验目录内的Icarus Verilog 12.0；缓存采用本次隔离安装的Verilator 5.032。Python依赖为Linux cp310或纯Pythonwheel，含cocotb 1.9.2、cocotb-test 0.2.6、pytest 8.3.5、MyHDL 0.11.51等；实际wheel保留于wheels目录。
+
+安装与构建问题及处理
+初始安装出现Shell换行和pip Bus error，均保留日志。改用本机准备固定wheel、顺序解包至自有python目录，运行时实际导入成功。Python版本条件依赖exceptiongroup、tomli、typing_extensions已补齐。
+OSS目录权限修改受限，解包包只列文件而不修改目录模式。普通C++目标文件写入OSS出现file truncated/No space left错误，但容量与inode诊断没有显示磁盘满；最小C++例子复现了写文件问题。compiler_ram.py将显式目标文件输出到匿名CPU内存，再顺序保存至自有OSS。TMPDIR设置为自有实验tmp目录。原生链接器使用同一办法输出可执行文件。linker_inputs.py使用GNU ld INPUT脚本替代此Verilator配方中的归档重写，并明确验证对象文件路径，不改变RTL或判据。正常编译、运行真实缓存模块和注入缺陷验证构成该适配实际可用的证据。没有将失败环境记录算作模型失败。
+官方DMA测试中pytest缓存目录权限警告不影响功能结果，原始日志保留。后续调用关闭自动加载系统pytest插件，并限制CPU编译并发。
+
+开源锁定
+verilog-axi: 516bd5dadc3365b7f9e225d2af8fe0b8d804fe53
+verilog-ethernet: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+Ibex: af456e25575013668ab56725268126f6b0feca35
+仓库地址、归档SHA256与文件计数以upstream_sources.json为准。全部上游许可证保留。前两个仓库已由上游声明由Taxi替代，本轮冻结历史版本以复现，不声称仍是其维护主线。
+
+原始测试实际完成边界
+DMA：运行未修改的test_axi_dma_wr.py::test_axi_dma_wr[32-1]，结果通过；这一pytest节点内部有4种idle/backpressure组合。不声称运行全部6组位宽/对齐参数矩阵。
+UDP：未修改test_udp_ip_rx.py原始MyHDL测试通过。初次失败原因是安全解包未生成tb/axis_ep.py符号链接；将同一锁定仓库的lib/axis/tb加入PYTHONPATH解决，没有修改测试答案或RTL。MyHDL VPI来自0.11.51发布源代码，摘要见myhdl_vpi/sources.json。
+缓存：未修改ibex_icache.sv与ibex_pkg.sv，增加同步RAM包装，使用自行编写的外部合同判据。完整Ibex UVM或CPU整核官方回归未运行。上游断言宏在Verilator下选择dummy实现，因此不能声称原生断言全部验证；本轮证据是功能合同检查及缺陷检出。
+
+任务资格
+三个参考包装通过开发2种子与独立3种子，共15次参考测试。日志为qualification_v07；此前失败版本全部保留。6个故意注入的功能错误均成功编译后被判据拒绝，结果为mutation_summary.json。资格检查证明这些用例能识别这6类缺陷，不证明判据完整性或任何输入的形式化正确。
+冻结前修正了缓存热点判据：允许分支首拍的一次投机读取，而不是要求零请求；源码、合同及模型协议在首次模型调用前冻结。
+
+UDP数值核验
+oracles.py包含两种独立累加方式的互联网校验和算法。它们在0..550字节共551种长度上匹配；RFC1071示例0001f203f4f5f6f7的校验和为220d；有效负载1..256、校验和零/非零的512个报文均被独立判据接受。见oracle_arithmetic_audit.json。
+依据：https://www.rfc-editor.org/rfc/rfc1071
+UDP伪首部与零校验和规则：https://www.rfc-editor.org/rfc/rfc768
+
+重测与数据界限
+开发测试与独立测试使用不同种子，但采用同一冻结判据，仍存在共同判据盲区。独立阶段可复用经源码哈希与已编译程序哈希校验的同一仿真程序，并以独立种子重新启动，不能复用开发测试的通过结果。每个任务只是当前固定接口的一个规格，模型单次初始生成；smoke不提供跨规格泛化、统计显著性、综合面积、时序或真实部署保证。
+
+冻结后、模型候选开发评分前的额外源码复查
+DMA核心会记录最后一次非OKAY响应，而本任务合同规定DECERR优先；原始测试采用每描述符统一响应类型，不能发现这一适配缺口。这是合同与参考包装策略不一致，不应称为上游核心违反AXI协议。
+supplement_dma_mixed单独保存补充协议、测试和reference_adapted.sv；加入单描述符活动门和SLVERR/DECERR聚合。补充参考核对使用同一描述符内循环DECERR、SLVERR、OKAY三类响应，3个种子下原包装均返回6而合同要求7，适配后均返回7且通过全部检查。适配参考也再次通过原有5种子测试。
+原v01协议、参考包装、测试代码和模型批次结果保留不动。补充测试创建在模型开发评分前，且不向修复模型提供反馈；最终选定源码后，所有DMA候选按同一补充测试核对。交付必须同时呈现原冻结结果与补充核对，不能将两者无标记混合。

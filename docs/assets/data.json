@@ -1106,14 +1106,904 @@
       "first_bad_event": 8,
       "unparseable_or_interface_failure": 1
     },
+    "actual_collection_costs": {
+      "produce": {
+        "actual_calls": 960,
+        "usage_available": 959,
+        "tokens": {
+          "prompt_tokens": 2219516,
+          "completion_tokens": 18411,
+          "total_tokens": 2237927
+        }
+      },
+      "review": {
+        "actual_calls": 2880,
+        "usage_available": 2880,
+        "tokens": {
+          "prompt_tokens": 6813342,
+          "completion_tokens": 48743,
+          "total_tokens": 6862085
+        }
+      },
+      "blind": {
+        "actual_calls": 720,
+        "usage_available": 718,
+        "tokens": {
+          "prompt_tokens": 1675775,
+          "completion_tokens": 14192,
+          "total_tokens": 1689967
+        }
+      }
+    },
+    "blind_analysis_reused_across_four_proposals": true,
     "generalization_scope": "New seeded event traces within the specified protocol families; parameter values overlap calibration and test. Not an unseen-parameter or unseen-project evaluation.",
     "selection_changed": false
   },
   "rtl": {
+    "ready": true,
     "summary": {
-      "complete": false
+      "complete": true,
+      "initial_cases": 72,
+      "distinct_injected_faults": 18,
+      "base_contracts": 3,
+      "route_rows": 216,
+      "actual_calls": 272,
+      "api_statuses": {
+        "complete": 271,
+        "http_error": 1
+      },
+      "methods": {
+        "direct_patch": {
+          "n": 72,
+          "independent_pass": 8,
+          "correct_adoption": 8,
+          "false_adoption": 11,
+          "logical_calls": 72
+        },
+        "same_family_trace": {
+          "n": 72,
+          "independent_pass": 10,
+          "correct_adoption": 10,
+          "false_adoption": 15,
+          "logical_calls": 174
+        },
+        "cross_family_trace": {
+          "n": 72,
+          "independent_pass": 19,
+          "correct_adoption": 19,
+          "false_adoption": 12,
+          "logical_calls": 170
+        }
+      },
+      "CPU_only": true,
+      "GPU_used": false
     },
-    "audit": null
+    "audit": {
+      "passed": true,
+      "base_contracts": 3,
+      "injected_faults": 18,
+      "initial_repair_cases": 72,
+      "paired_rows": 216,
+      "reference_seed_passes": 15,
+      "functional_fault_rejections": 18,
+      "one_equivalent_mutation_excluded": true,
+      "selection_unchanged": true,
+      "independent_feedback_not_used": true,
+      "frozen_sources_unchanged": true,
+      "credential_scan_files": 1571,
+      "API_output_source_binding": true,
+      "actual_calls": 272,
+      "summary_recomputed": true,
+      "upstream_archives_and_four_core_sources_match_pinned_versions": true,
+      "usage_tokens": {
+        "prompt_tokens": 1246697,
+        "completion_tokens": 536067,
+        "total_tokens": 1782764
+      },
+      "API_reported_models": {
+        "gpt-5.4-2026-03-05": 58,
+        "qwen3.8-max": 70,
+        "deepseek-v4-pro": 64,
+        "kimi-k2.5": 79,
+        "unknown": 1
+      },
+      "fixed_GPT_three_call_control": {
+        "n": 18,
+        "correct_adoption": 8,
+        "false_adoption": 5,
+        "logical_calls": 32
+      },
+      "GPT_initial_paired_routes": {
+        "direct_patch": {
+          "n": 18,
+          "correct_adoption": 6,
+          "false_adoption": 4,
+          "logical_calls": 18
+        },
+        "same_family_trace": {
+          "n": 18,
+          "correct_adoption": 8,
+          "false_adoption": 5,
+          "logical_calls": 32
+        },
+        "cross_family_trace": {
+          "n": 18,
+          "correct_adoption": 7,
+          "false_adoption": 4,
+          "logical_calls": 33
+        }
+      },
+      "independent_result_categories": {
+        "direct_patch": {
+          "pass": 8,
+          "functional_contract": 20,
+          "compile_or_runtime": 20,
+          "simulation_time_precision": 7,
+          "environment_filesystem": 17
+        },
+        "same_family_trace": {
+          "pass": 10,
+          "functional_contract": 19,
+          "simulation_time_precision": 10,
+          "contract_gate:preprocessor_access": 2,
+          "compile_or_runtime": 10,
+          "environment_filesystem": 21
+        },
+        "cross_family_trace": {
+          "pass": 19,
+          "functional_contract": 14,
+          "API:http_error": 1,
+          "compile_or_runtime": 15,
+          "simulation_time_precision": 2,
+          "environment_filesystem": 21
+        }
+      },
+      "development_independent_disagreements": [
+        {
+          "case": "icache_ctrl__fault0__0",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "06d012126d641148ca1baa0ff902bcc96195963d9b4fd965303f01e07466fdb6"
+        },
+        {
+          "case": "icache_ctrl__fault0__0",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "06d012126d641148ca1baa0ff902bcc96195963d9b4fd965303f01e07466fdb6"
+        },
+        {
+          "case": "icache_ctrl__fault0__0",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "06d012126d641148ca1baa0ff902bcc96195963d9b4fd965303f01e07466fdb6"
+        },
+        {
+          "case": "icache_ctrl__fault0__1",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "ae7be791f6de71720e86570d97d001fb0575033c32611da03586cb14b9eb5978"
+        },
+        {
+          "case": "icache_ctrl__fault0__1",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "ae7be791f6de71720e86570d97d001fb0575033c32611da03586cb14b9eb5978"
+        },
+        {
+          "case": "icache_ctrl__fault0__1",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "ae7be791f6de71720e86570d97d001fb0575033c32611da03586cb14b9eb5978"
+        },
+        {
+          "case": "icache_ctrl__fault0__2",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "26b49e8d60413a457debede2b1ed0a9c822d95318c74fe54b4543ac61ab43f81"
+        },
+        {
+          "case": "icache_ctrl__fault0__2",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "26b49e8d60413a457debede2b1ed0a9c822d95318c74fe54b4543ac61ab43f81"
+        },
+        {
+          "case": "icache_ctrl__fault0__2",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "26b49e8d60413a457debede2b1ed0a9c822d95318c74fe54b4543ac61ab43f81"
+        },
+        {
+          "case": "icache_ctrl__fault1__0",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "3e818109cf08402305d531e033640f57598ddcea43cc22d134f544f39317098f"
+        },
+        {
+          "case": "icache_ctrl__fault1__1",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "9bd33ef19db4fe8330343607d74d72cb296d6108eed2efd6895ad94c47cfa73e"
+        },
+        {
+          "case": "icache_ctrl__fault1__2",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "e84a56d2377f91681841ad9149fd762e3b7642b928f645ad9503fd5ba9e9ac75"
+        },
+        {
+          "case": "icache_ctrl__fault1__2",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "e84a56d2377f91681841ad9149fd762e3b7642b928f645ad9503fd5ba9e9ac75"
+        },
+        {
+          "case": "icache_ctrl__fault1__2",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "e84a56d2377f91681841ad9149fd762e3b7642b928f645ad9503fd5ba9e9ac75"
+        },
+        {
+          "case": "icache_ctrl__fault2__2",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "bc2d3699a7edfb43301688190705378d56ee729627d9f44f01beb5b18c02f5c7"
+        },
+        {
+          "case": "icache_ctrl__fault2__2",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "bc2d3699a7edfb43301688190705378d56ee729627d9f44f01beb5b18c02f5c7"
+        },
+        {
+          "case": "icache_ctrl__fault2__2",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "bc2d3699a7edfb43301688190705378d56ee729627d9f44f01beb5b18c02f5c7"
+        },
+        {
+          "case": "icache_ctrl__fault3__0",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "9265e1a891ee54ab4900b9d69897ed8b07bf311e6d0513e2faff566a37b7eb88"
+        },
+        {
+          "case": "icache_ctrl__fault3__0",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "9265e1a891ee54ab4900b9d69897ed8b07bf311e6d0513e2faff566a37b7eb88"
+        },
+        {
+          "case": "icache_ctrl__fault3__0",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "9265e1a891ee54ab4900b9d69897ed8b07bf311e6d0513e2faff566a37b7eb88"
+        },
+        {
+          "case": "icache_ctrl__fault3__1",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "c6707316d9908b5a210eba83cb5ef0405c639400543135f8a47a43aee9f420af"
+        },
+        {
+          "case": "icache_ctrl__fault3__1",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "c6707316d9908b5a210eba83cb5ef0405c639400543135f8a47a43aee9f420af"
+        },
+        {
+          "case": "icache_ctrl__fault3__1",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "c6707316d9908b5a210eba83cb5ef0405c639400543135f8a47a43aee9f420af"
+        },
+        {
+          "case": "icache_ctrl__fault3__2",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "7cebd42588c2f4172078d33f45c0af52e373280bb4fa1d1c5237c40f9cc0122e"
+        },
+        {
+          "case": "icache_ctrl__fault3__2",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "7cebd42588c2f4172078d33f45c0af52e373280bb4fa1d1c5237c40f9cc0122e"
+        },
+        {
+          "case": "icache_ctrl__fault3__2",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "7cebd42588c2f4172078d33f45c0af52e373280bb4fa1d1c5237c40f9cc0122e"
+        },
+        {
+          "case": "icache_ctrl__fault3__3",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "6ea37385ee4bbba376a7f8ef0786d417de9f7a0f4b3dbb5bfff609acdb3bfcf8"
+        },
+        {
+          "case": "icache_ctrl__fault4__0",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "f837d219baeffbf4d5b7b0a3137ae1fb1e180070e787735366dce4d89d0d0f8d"
+        },
+        {
+          "case": "icache_ctrl__fault4__0",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "f837d219baeffbf4d5b7b0a3137ae1fb1e180070e787735366dce4d89d0d0f8d"
+        },
+        {
+          "case": "icache_ctrl__fault4__0",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "f837d219baeffbf4d5b7b0a3137ae1fb1e180070e787735366dce4d89d0d0f8d"
+        },
+        {
+          "case": "icache_ctrl__fault4__1",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "f480c8d85a6b36237397723d1e3d81ce1609a156367526fd6d4de94235f4ae1b"
+        },
+        {
+          "case": "icache_ctrl__fault4__1",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "f480c8d85a6b36237397723d1e3d81ce1609a156367526fd6d4de94235f4ae1b"
+        },
+        {
+          "case": "icache_ctrl__fault4__1",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "f480c8d85a6b36237397723d1e3d81ce1609a156367526fd6d4de94235f4ae1b"
+        },
+        {
+          "case": "icache_ctrl__fault4__2",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "670f98230c338e006fa5c0243590ccfdf925cb8b15cc7053ba65aa926c37593e"
+        },
+        {
+          "case": "icache_ctrl__fault4__3",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "974d0dd05cb4dc7472725913820437ce7ff04f3144bd97295bdf1958647d1f8d"
+        },
+        {
+          "case": "icache_ctrl__fault5__0",
+          "task": "icache_ctrl",
+          "method": "direct_patch",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "bcfaab61e7ed0ae178f35c9c78bb8df8501819d80e2d1032b31a9ca5d8aee80e"
+        },
+        {
+          "case": "icache_ctrl__fault5__0",
+          "task": "icache_ctrl",
+          "method": "same_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "bcfaab61e7ed0ae178f35c9c78bb8df8501819d80e2d1032b31a9ca5d8aee80e"
+        },
+        {
+          "case": "icache_ctrl__fault5__0",
+          "task": "icache_ctrl",
+          "method": "cross_family_trace",
+          "development_pass": true,
+          "independent_pass": false,
+          "source_sha256": "bcfaab61e7ed0ae178f35c9c78bb8df8501819d80e2d1032b31a9ca5d8aee80e"
+        }
+      ],
+      "cross_minus_same_correct_adoption_difference95": [
+        0.02777777777777779,
+        0.2222222222222222
+      ],
+      "tasks": {
+        "dma_write": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 7
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 7
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 13
+          }
+        },
+        "udp_rx_guard": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 1
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 3
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 6
+          }
+        },
+        "icache_ctrl": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 0
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 0
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 0
+          }
+        }
+      },
+      "source_contract_methods": {
+        "direct_patch": {
+          "n": 72,
+          "source_contract_valid": 52,
+          "correct_adoption": 8,
+          "false_adoption": 11,
+          "accepted_source_violations": 0
+        },
+        "same_family_trace": {
+          "n": 72,
+          "source_contract_valid": 46,
+          "correct_adoption": 9,
+          "false_adoption": 16,
+          "accepted_source_violations": 1
+        },
+        "cross_family_trace": {
+          "n": 72,
+          "source_contract_valid": 36,
+          "correct_adoption": 15,
+          "false_adoption": 16,
+          "accepted_source_violations": 4
+        }
+      },
+      "source_contract_tasks": {
+        "dma_write": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 7
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 7
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 13
+          }
+        },
+        "udp_rx_guard": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 1
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 2
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 2
+          }
+        },
+        "icache_ctrl": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 0
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 0
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 0
+          }
+        }
+      },
+      "source_contract_GPT_initial_routes": {
+        "direct_patch": {
+          "n": 18,
+          "correct_adoption": 6,
+          "false_adoption": 4,
+          "logical_calls": 18
+        },
+        "same_family_trace": {
+          "n": 18,
+          "correct_adoption": 7,
+          "false_adoption": 6,
+          "logical_calls": 32
+        },
+        "cross_family_trace": {
+          "n": 18,
+          "correct_adoption": 6,
+          "false_adoption": 5,
+          "logical_calls": 33
+        }
+      },
+      "source_contract_cross_minus_same_difference95": [
+        0.027777777777777762,
+        0.1388888888888889
+      ],
+      "final_development_time_precision_rows": [
+        {
+          "case": "dma_write__fault2__2",
+          "method": "direct_patch",
+          "task": "dma_write",
+          "core_instance_present": false
+        },
+        {
+          "case": "dma_write__fault2__2",
+          "method": "same_family_trace",
+          "task": "dma_write",
+          "core_instance_present": false
+        },
+        {
+          "case": "dma_write__fault3_protection__2",
+          "method": "same_family_trace",
+          "task": "dma_write",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault0__2",
+          "method": "direct_patch",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault0__2",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault0__3",
+          "method": "direct_patch",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault0__3",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault1__3",
+          "method": "direct_patch",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault1__3",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault2__2",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault2__3",
+          "method": "direct_patch",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault2__3",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault3__3",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault4__1",
+          "method": "cross_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault4__2",
+          "method": "cross_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault4__3",
+          "method": "direct_patch",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault4__3",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault5__3",
+          "method": "direct_patch",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        },
+        {
+          "case": "udp_rx_guard__fault5__3",
+          "method": "same_family_trace",
+          "task": "udp_rx_guard",
+          "core_instance_present": false
+        }
+      ],
+      "CPU_only": true,
+      "GPU_used": false,
+      "boundary": "Injection benchmark on three wrapper contracts; no historical bug, PPA, formal proof or whole-core claim"
+    },
+    "precision": {
+      "complete": true,
+      "model_calls": 0,
+      "selection_unchanged": true,
+      "unique_final_sources": 175,
+      "qualification_rows": 21,
+      "methods": {
+        "direct_patch": {
+          "n": 72,
+          "regraded_development_pass": 19,
+          "regraded_independent_pass": 19,
+          "frozen_correct_adoption": 19,
+          "frozen_false_adoption": 0,
+          "development_rejected_but_independent_pass": 0
+        },
+        "same_family_trace": {
+          "n": 72,
+          "regraded_development_pass": 26,
+          "regraded_independent_pass": 26,
+          "frozen_correct_adoption": 24,
+          "frozen_false_adoption": 1,
+          "development_rejected_but_independent_pass": 1
+        },
+        "cross_family_trace": {
+          "n": 72,
+          "regraded_development_pass": 32,
+          "regraded_independent_pass": 32,
+          "frozen_correct_adoption": 27,
+          "frozen_false_adoption": 4,
+          "development_rejected_but_independent_pass": 1
+        }
+      },
+      "interpretation": "Execution-only reassessment including default time precision and immutable source upload; original adoption decisions stay frozen. Regraded development success is diagnostic, not retroactive adoption. Corrections cannot undo previous execution failures already supplied as feedback."
+    },
+    "precision_audit": {
+      "passed": true,
+      "rows": 216,
+      "reference_seed_passes": 15,
+      "functional_fault_rejections": 18,
+      "source_and_selection_unchanged": true,
+      "task_assertions_unchanged": true,
+      "isolated_grader_revision": true,
+      "immutable_source_upload": true,
+      "model_calls": 0,
+      "residual_time_precision_errors": 0,
+      "residual_filesystem_errors": 0,
+      "interpretation": "Execution-only reassessment including default time precision and immutable source upload; original adoption decisions stay frozen. Regraded development success is diagnostic, not retroactive adoption. Corrections cannot undo previous execution failures already supplied as feedback.",
+      "tasks": {
+        "dma_write": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 7
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 7
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 13
+          }
+        },
+        "udp_rx_guard": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 1
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 2
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 2
+          }
+        },
+        "icache_ctrl": {
+          "direct_patch": {
+            "n": 24,
+            "correct_adoption": 11
+          },
+          "same_family_trace": {
+            "n": 24,
+            "correct_adoption": 15
+          },
+          "cross_family_trace": {
+            "n": 24,
+            "correct_adoption": 12
+          }
+        }
+      },
+      "GPT_initial_paired_routes": {
+        "direct_patch": {
+          "n": 18,
+          "correct_adoption": 10,
+          "false_adoption": 0,
+          "logical_calls": 18
+        },
+        "same_family_trace": {
+          "n": 18,
+          "correct_adoption": 12,
+          "false_adoption": 1,
+          "logical_calls": 32
+        },
+        "cross_family_trace": {
+          "n": 18,
+          "correct_adoption": 10,
+          "false_adoption": 1,
+          "logical_calls": 33
+        }
+      },
+      "cross_minus_same_correct_adoption_difference95": [
+        -0.04166666666666663,
+        0.11111111111111116
+      ]
+    },
+    "smoke": {
+      "summary": {
+        "complete": true,
+        "initial_cases": 12,
+        "distinct_injected_faults": 3,
+        "base_contracts": 3,
+        "route_rows": 12,
+        "actual_calls": 25,
+        "api_statuses": {
+          "complete": 25
+        },
+        "methods": {
+          "cross_family_trace": {
+            "n": 12,
+            "independent_pass": 8,
+            "correct_adoption": 8,
+            "false_adoption": 0,
+            "logical_calls": 25
+          }
+        },
+        "CPU_only": true,
+        "GPU_used": false
+      },
+      "audit": {
+        "passed": true,
+        "cases": 12,
+        "reference_seed_passes": 15,
+        "functional_fault_rejections": 3,
+        "source_gate_rejections": 3,
+        "source_and_selection_bound": true,
+        "development_only_feedback": true,
+        "actual_calls": 25,
+        "new_independent_seeds": [
+          31771,
+          43103,
+          54721
+        ],
+        "CPU_only": true,
+        "GPU_used": false,
+        "scope": "Pipeline smoke; not an effect-size or generalization claim",
+        "tasks": {
+          "dma_write": {
+            "n": 4,
+            "correct_adoption": 4,
+            "false_adoption": 0
+          },
+          "udp_rx_guard": {
+            "n": 4,
+            "correct_adoption": 2,
+            "false_adoption": 0
+          },
+          "icache_ctrl": {
+            "n": 4,
+            "correct_adoption": 2,
+            "false_adoption": 0
+          }
+        },
+        "independent_result_categories": {
+          "pass": 8,
+          "functional_assertion": 3,
+          "compile_or_runtime_error": 1
+        },
+        "residual_filesystem_errors": 0
+      }
+    }
   },
   "producers": [
     "gpt-5.4",
@@ -1719,6 +2609,47 @@
           "parse_valid": true,
           "api_status": "complete",
           "tag": "transaction_20010_0__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "transaction_20010_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 7,
+            "rule": "WRITE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20010_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":7,\"rule\":\"WRITE\"}"
+        },
+        {
+          "case": "transaction_20010_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20010_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "transaction_20010_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 25,
+            "rule": "ABORT"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20010_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 25,\n  \"rule\": \"ABORT\"\n}"
         }
       ]
     },
@@ -2499,6 +3430,47 @@
           "api_status": "complete",
           "tag": "transaction_20012_0__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "transaction_20012_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 11,
+            "rule": "WRITE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20012_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":11,\"rule\":\"WRITE\"}"
+        },
+        {
+          "case": "transaction_20012_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 14,
+            "rule": "COMMIT"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20012_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":14,\"rule\":\"COMMIT\"}"
+        },
+        {
+          "case": "transaction_20012_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20012_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": true,\n  \"first_bad_event\": null,\n  \"rule\": null\n}"
+        }
       ]
     },
     {
@@ -2996,6 +3968,47 @@
           "parse_valid": true,
           "api_status": "complete",
           "tag": "transaction_20013_0__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "transaction_20013_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 8,
+            "rule": "WRITE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20013_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":8,\"rule\":\"WRITE\"}"
+        },
+        {
+          "case": "transaction_20013_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20013_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "transaction_20013_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20013_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": true,\n  \"first_bad_event\": null,\n  \"rule\": null\n}"
         }
       ]
     },
@@ -3597,6 +4610,47 @@
           "api_status": "complete",
           "tag": "transaction_20010_1__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "transaction_20010_1",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 7,
+            "rule": "WRITE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20010_1__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":7,\"rule\":\"WRITE\"}"
+        },
+        {
+          "case": "transaction_20010_1",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 64,
+            "rule": "COMMIT"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20010_1__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":64,\"rule\":\"COMMIT\"}"
+        },
+        {
+          "case": "transaction_20010_1",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 34,
+            "rule": "BEGIN"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "transaction_20010_1__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 34,\n  \"rule\": \"BEGIN\"\n}"
+        }
       ]
     },
     {
@@ -4094,6 +5148,47 @@
           "parse_valid": true,
           "api_status": "complete",
           "tag": "transaction_20011_0__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "transaction_20011_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20011_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "transaction_20011_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20011_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "transaction_20011_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "transaction_20011_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": true,\n  \"first_bad_event\": null,\n  \"rule\": null\n}"
         }
       ]
     },
@@ -4669,6 +5764,47 @@
           "api_status": "complete",
           "tag": "lease_20010_0__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "lease_20010_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20010_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "lease_20010_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 65,
+            "rule": "ACQUIRE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "lease_20010_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":65,\"rule\":\"ACQUIRE\"}"
+        },
+        {
+          "case": "lease_20010_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 63,
+            "rule": "ACQUIRE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "lease_20010_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 63,\n  \"rule\": \"ACQUIRE\"\n}"
+        }
       ]
     },
     {
@@ -5124,6 +6260,47 @@
           "parse_valid": false,
           "api_status": "complete",
           "tag": "lease_20011_0__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "lease_20011_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20011_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "lease_20011_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 42,
+            "rule": "ACQUIRE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "lease_20011_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":42,\"rule\":\"ACQUIRE\"}"
+        },
+        {
+          "case": "lease_20011_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 40,
+            "rule": "ACQUIRE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "lease_20011_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 40,\n  \"rule\": \"ACQUIRE\"\n}"
         }
       ]
     },
@@ -5913,6 +7090,47 @@
           "api_status": "complete",
           "tag": "lease_20012_0__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "lease_20012_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20012_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "lease_20012_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20012_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "lease_20012_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20012_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": true,\n  \"first_bad_event\": null,\n  \"rule\": null\n}"
+        }
       ]
     },
     {
@@ -6492,6 +7710,47 @@
           "api_status": "complete",
           "tag": "lease_20010_1__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "lease_20010_1",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 60,
+            "rule": "RELEASE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20010_1__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":60,\"rule\":\"RELEASE\"}"
+        },
+        {
+          "case": "lease_20010_1",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 60,
+            "rule": "RELEASE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20010_1__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":60,\"rule\":\"RELEASE\"}"
+        },
+        {
+          "case": "lease_20010_1",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 60,
+            "rule": "RELEASE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20010_1__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 60,\n  \"rule\": \"RELEASE\"\n}"
+        }
       ]
     },
     {
@@ -6947,6 +8206,47 @@
           "parse_valid": true,
           "api_status": "complete",
           "tag": "lease_20011_1__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "lease_20011_1",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 1,
+            "rule": "ACQUIRE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20011_1__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":1,\"rule\":\"ACQUIRE\"}"
+        },
+        {
+          "case": "lease_20011_1",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 1,
+            "rule": "ACQUIRE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "lease_20011_1__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":1,\"rule\":\"ACQUIRE\"}"
+        },
+        {
+          "case": "lease_20011_1",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "lease_20011_1__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": true,\n  \"first_bad_event\": null,\n  \"rule\": null\n}"
         }
       ]
     },
@@ -7412,6 +8712,47 @@
           "parse_valid": true,
           "api_status": "complete",
           "tag": "request_20010_0__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "request_20010_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20010_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "request_20010_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20010_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "request_20010_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 19,
+            "rule": "SUBMIT"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "request_20010_0__blind__deepseek-v4-pro",
+          "raw_text": "```json\n{\n  \"valid\": false,\n  \"first_bad_event\": 19,\n  \"rule\": \"SUBMIT\"\n}\n```"
         }
       ]
     },
@@ -8123,6 +9464,47 @@
           "api_status": "complete",
           "tag": "request_20011_1__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "request_20011_1",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 7,
+            "rule": "DATA"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20011_1__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":7,\"rule\":\"DATA\"}"
+        },
+        {
+          "case": "request_20011_1",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 7,
+            "rule": "DATA"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20011_1__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":7,\"rule\":\"DATA\"}"
+        },
+        {
+          "case": "request_20011_1",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 8,
+            "rule": "DATA"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "request_20011_1__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 8,\n  \"rule\": \"DATA\"\n}"
+        }
       ]
     },
     {
@@ -8693,6 +10075,47 @@
           "api_status": "complete",
           "tag": "request_20013_0__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "request_20013_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20013_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "request_20013_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 19,
+            "rule": "COMPLETE"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "request_20013_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":19,\"rule\":\"COMPLETE\"}"
+        },
+        {
+          "case": "request_20013_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20013_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": true,\n  \"first_bad_event\": null,\n  \"rule\": null\n}"
+        }
       ]
     },
     {
@@ -9162,6 +10585,47 @@
           "parse_valid": true,
           "api_status": "complete",
           "tag": "request_20010_1__review__kimi-k2.5__deepseek-v4-pro"
+        }
+      ],
+      "blind_answers": [
+        {
+          "case": "request_20010_1",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 38,
+            "rule": "COMPLETE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20010_1__blind__gpt-5.4",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":38,\"rule\":\"COMPLETE\"}"
+        },
+        {
+          "case": "request_20010_1",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 38,
+            "rule": "COMPLETE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20010_1__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":38,\"rule\":\"COMPLETE\"}"
+        },
+        {
+          "case": "request_20010_1",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 38,
+            "rule": "COMPLETE"
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20010_1__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 38,\n  \"rule\": \"COMPLETE\"\n}"
         }
       ]
     },
@@ -9873,12 +11337,53 @@
           "api_status": "complete",
           "tag": "request_20011_0__review__kimi-k2.5__deepseek-v4-pro"
         }
+      ],
+      "blind_answers": [
+        {
+          "case": "request_20011_0",
+          "reviewer": "gpt-5.4",
+          "answer": {
+            "valid": true,
+            "first_bad_event": null,
+            "rule": null
+          },
+          "correct": true,
+          "api_status": "complete",
+          "tag": "request_20011_0__blind__gpt-5.4",
+          "raw_text": "{\"valid\":true,\"first_bad_event\":null,\"rule\":null}"
+        },
+        {
+          "case": "request_20011_0",
+          "reviewer": "qwen3.8-max",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 13,
+            "rule": "DATA"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "request_20011_0__blind__qwen3.8-max",
+          "raw_text": "{\"valid\":false,\"first_bad_event\":13,\"rule\":\"DATA\"}"
+        },
+        {
+          "case": "request_20011_0",
+          "reviewer": "deepseek-v4-pro",
+          "answer": {
+            "valid": false,
+            "first_bad_event": 5,
+            "rule": "SUBMIT"
+          },
+          "correct": false,
+          "api_status": "complete",
+          "tag": "request_20011_0__blind__deepseek-v4-pro",
+          "raw_text": "{\n  \"valid\": false,\n  \"first_bad_event\": 5,\n  \"rule\": \"SUBMIT\"\n}"
+        }
       ]
     }
   ],
-  "abstract": "面向大模型参与工程决策时答案难以可靠采纳的问题，本文研究生产错误、模型配对漏检与最终采纳风险之间的关系，提出以明确任务合同和可执行判据组织生成—审核—独立验证流程。我们将生产答案错误率与特定生产者—审核者对错误的漏检率分开测量，避免把模型意见一致或低查询费用直接解释为高质量。文本协议实验覆盖请求确认、事务提交和资源租约三个自定义有界协议族，以在线状态机和历史重建判定器建立真值，在120个独立生成场景中构造240条合法或含缺陷轨迹，覆盖51种参数配置。四个不同家族接口产生960份分析，三个审核接口完成2880次全交叉审核，另进行720次盲解对照；30个场景仅用于校准，90个场景用于冻结测试。测试采用新的事件轨迹，参数可与校准集重复，不属于未见参数外推。独立测试精确正确数为GPT 125/180、Qwen 134/180、DeepSeek 126/180、Kimi 119/180。在冻结测试集上，按生产者选择审核放行 385/720 份答案，其中错误 63；校准集选择的全局审核放行 278/720，其中错误 53。风险差的规格分簇 95% 描述区间为 -7.2 至 1.2 个百分点。此结果同时受覆盖率、有限校准场景和协议分布影响，不能据此宣称跨家族或配对路由普遍更优。身份打乱路线仍放行380份、错误62份，配对身份增量尚未获支持。独立盲解再比较放行372份、错误33份，条件错误率8.9%；本测试上观测到更低的放行后错误率，但该对照同时改变了输入与回答任务，不能单独归因为锚定效应。工程线上，已验证三个参考实现和18个注入功能缺陷，72份初始修复及其三次调用配对路线正在运行；此阶段未完成的通过率暂不作为论文结论。实验保留接口失败、格式失败及判据修订记录，按规格场景进行分簇比较，并分别报告正确率、漏检率、覆盖率、放行后错误率和调用成本。本研究提供可追溯的闭合评测与工程验证材料，揭示有限开发测试和模型审核均可能遗漏错误；其证据限于所定义协议与模块级合同，不构成普遍方法优势、完整硬件正确性或部署风险证书。",
-  "protocol_conclusion": "在冻结测试集上，按生产者选择审核放行 385/720 份答案，其中错误 63；校准集选择的全局审核放行 278/720，其中错误 53。风险差的规格分簇 95% 描述区间为 -7.2 至 1.2 个百分点。此结果同时受覆盖率、有限校准场景和协议分布影响，不能据此宣称跨家族或配对路由普遍更优。身份打乱路线仍放行380份、错误62份，配对身份增量尚未获支持。独立盲解再比较放行372份、错误33份，条件错误率8.9%；本测试上观测到更低的放行后错误率，但该对照同时改变了输入与回答任务，不能单独归因为锚定效应。",
+  "abstract": "面向大模型参与工程分析与代码修复时结果难以可靠采纳的问题，本研究构建明确任务合同、可执行判据和独立测试相分离的评测流程，将生产答案错误率、生产者—审核者配对漏检率及采纳后的条件错误率分别测量，优先评价质量与错误采纳。研究包含可闭合的文本协议分析与开源RTL子系统修复两条证据线。文本任务覆盖请求确认、事务提交和资源租约三个自定义有界协议族，以在线状态机和历史重建判定器给出真值；120个独立生成场景覆盖51种参数配置，构造240条不同轨迹，30个场景用于校准、90个场景用于测试。四个标称来自不同家族的模型接口生成960份分析，三个审核接口完成2880次全交叉审核，另收集720次独立盲解；总计4560次正式调用，失败记录保留。冻结测试上的精确分析正确率为66.1%至74.4%。按生产者选择审核未形成稳定质量优势，其相对全局审核的条件风险差描述区间为-7.2至1.2个百分点。独立盲解再比较在本协议测试上放行372/720份答案，错误33份，条件错误率8.9%；全局审核为19.1%。该对照改变了输入与回答任务，不单独识别锚定效应。工程线上，三个固定开源子系统合同覆盖18个经功能资格验证的注入包装缺陷，四个模型生成72份初始修复，继续路线最多三次总调用。保留原源码与采纳决定，经执行修正复评及原指令源码必要条件核查，同家族与跨家族路线正确采纳分别为24/72和27/72，错误采纳分别为1和4份。另用前置源码门控、保留原集成上下文和新种子完成12例流程smoke，正确采纳8/12。跨家族与同家族正确采纳差异的描述区间跨零，固定GPT起点子集也未支持跨家族优势。原环境的时间精度与重复编译文件覆盖问题已另版修正；复评不能撤销旧执行失败曾进入修复反馈的影响，方法比较仍限于本批诊断。研究提供可追溯的任务、调用、开发反馈、独立评分和复现材料，显示模型同意与有限开发测试均不能替代工程正确性判据。参数值可在校准与测试间重复，RTL采用人工注入包装缺陷；证据限于所定义分布与模块合同，不构成普适方法优势、形式化硬件证明或部署风险证书。",
+  "protocol_conclusion": "在冻结测试集上，按生产者选择审核放行 385/720 份答案，其中错误 63；校准集选择的全局审核放行 278/720，其中错误 53。风险差的生成场景分簇 95% 描述区间为 -7.2 至 1.2 个百分点。此结果同时受覆盖率、有限校准场景和协议分布影响，不能据此宣称跨家族或配对路由普遍更优。身份打乱路线仍放行380份、错误62份，配对身份增量尚未获支持。独立盲解再比较放行372份、错误33份，条件错误率8.9%；本测试上观测到更低的放行后错误率，但该对照同时改变了输入与回答任务，不能单独归因为锚定效应。",
   "history": "在位宽转换 FIFO、整包锁定仲裁和可停顿算术流水线上，完成12种配置、120份初始候选与7条共享路线（共840条结果）。初始候选有49/120通过五个封存种子；固定强模型反例修复有113/120通过。该阶段实际调用991次，与本轮任务复杂度、预算和协议不同，不能合并为统一准确率。",
-  "audit_caption": "正式文本数据：4560 个唯一调用，120个生成场景、51种参数配置、240条不同轨迹；原冻结判据与扩大时间域判据复核标签不变。数据、输出绑定与凭据扫描已通过。模型身份按 API 返回记录。",
-  "updated_at": "2026-10-11T18:09:20.170244+00:00"
+  "audit_caption": "正式文本数据：4560 个唯一调用，120个生成场景、51种参数配置、240条不同轨迹；原冻结判据与扩大时间域判据复核标签不变。数据、输出绑定与凭据扫描已通过。模型身份按 API 返回记录。 工程：216条冻结路线执行复评、12例前置门控smoke及源码／调用绑定审计通过；功能与环境执行问题分别保留。",
+  "updated_at": "2026-10-11T21:02:09.840338+00:00"
 }

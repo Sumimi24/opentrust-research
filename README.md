@@ -6,10 +6,14 @@ The website is in `docs/` and is intended for GitHub Pages. It presents a single
 
 ## New experiments
 
-* Synthetic bounded protocols: transaction commit, resource leases, request/acknowledgment. 120 independently seeded scenarios covering 51 unique parameter configurations, 240 distinct traces, four producer interfaces, three reviewer interfaces, plus blind independent analysis. 30 scenarios are calibration only; 90 are test only. Parameter values overlap the splits; this evaluates fresh seeded traces within the protocol families, not unseen-parameter generalization. The full planned matrix contains 4,560 model calls.
+* Synthetic bounded protocols: transaction commit, resource leases, request/acknowledgment. 120 independently seeded scenarios covering 51 unique parameter configurations, 240 distinct traces, four producer interfaces, three reviewer interfaces, plus blind independent analysis. 30 scenarios are calibration only; 90 are test only. Parameter values overlap the splits; this evaluates fresh seeded traces within the protocol families, not unseen-parameter generalization. The completed formal matrix contains 4,560 actual model calls, including three transport failures.
 * Open-source RTL integration repair: DMA writer, UDP receive guard, instruction-cache controller. Three pinned core projects; 18 functionally qualified injected wrapper faults; 72 initial repairs and same/cross-family paired continuation routes, each capped at three total model calls.
 
+The RTL study completed 272 actual API calls and 216 route records. After execution-only reassessment with frozen original decisions and the necessary source check, correct adoption was 19/72 (one call), 24/72 (same family) and 27/72 (cross family). The descriptive fault-cluster interval for cross minus same crosses zero. A separate source-gated pipeline smoke completed 25 calls and 12 cases, with 8 correct adoptions and no observed false adoption. These are finite simulation results, not deployment risk certificates.
+
 These are separate studies. Protocol analysis accuracy is not RTL correctness, and injected wrapper faults are not historical upstream bugs. Cases, API calls, seed replays, and independent projects must not be used interchangeably as sample counts.
+
+Each of the 720 blind analyses is reused for comparison with the four producer proposals on the same trace. The website's one/three-review budget describes a hypothetical route for a single proposal, not the actual cost of collecting the full matrix. Equal API-call counts do not imply equal token or monetary costs. Component token totals and parameter-overlap diagnostics are available in `research/protocol_formal/dataset_scope_audit.json`.
 
 ## Offline reproduction
 
@@ -20,7 +24,7 @@ python reproduce_protocol.py
 python reproduce_rtl_results.py
 ```
 
-The script rechecks all 240 truths with two CPU implementations, verifies the 960 saved candidate labels, and reruns the frozen calibration-only route analysis and specification-cluster bootstrap. It does **not** call models or repeat RTL simulations. API metadata in `research/protocol_formal/api_attempts_metadata.jsonl` omits repeated request payloads; the full original records and frozen sources are retained in the downloadable `docs/assets/protocol-study.zip`.
+The first script rechecks all 240 truths with two CPU implementations, verifies the 960 saved candidate labels, and reruns the frozen calibration-only route analysis and specification-cluster bootstrap. It does **not** call models or repeat RTL simulations. API metadata in `research/protocol_formal/api_attempts_metadata.jsonl` omits repeated request payloads; the full original records and frozen sources are retained in the downloadable `docs/assets/protocol-study.zip`.
 
 To preview the site:
 
@@ -38,7 +42,7 @@ One transport-error response lacked a `text` field and interrupted input assembl
 
 The RTL environment used Linux CPU simulation, Python 3.10, cocotb 1.9.2, Icarus 12 and Verilator 5.032. Compilation adaptations for the owner's OSS filesystem are environment-specific. Original scores/logs support the reported execution; offline result replay should not be called a fresh hardware simulation. No GPU was used or controlled.
 
-The second reproduction command requires the completed RTL archive in `docs/assets/rtl-repair-study.zip`. It checks the 216 saved route rows, source identities, selection before independent testing, seed sets, qualification records and actual call accounting. It does not compile or simulate hardware. The archive also retains the pinned upstream archives, frozen contracts, wrapper sources, test code and compiler adaptations. Experimental runners retain their original machine-specific paths for provenance; rerunning API or RTL execution requires configuring those paths and installing the listed CPU tools. No credentials are included.
+The second reproduction command requires the completed RTL archive in `docs/assets/rtl-repair-study.zip`. It checks the 216 saved route rows, source identities, selection before independent testing, seed sets, qualification records and actual call accounting. It also rechecks the source-contract audit, all 216 execution-corrected rows with frozen original acceptance decisions, and the separate 12-case source-gated smoke including its source omissions and call cap. It does not compile or simulate hardware. The archive also retains the pinned upstream archives, frozen contracts, wrapper sources, test code and compiler adaptations. Experimental runners retain their original machine-specific paths for provenance; rerunning API or RTL execution requires configuring those paths and installing the listed CPU tools. No credentials are included.
 
 ## Sources and licenses
 
@@ -47,3 +51,13 @@ Pinned upstream projects: [verilog-axi](https://github.com/alexforencich/verilog
 Evaluation design references: [Learn then Test](https://arxiv.org/abs/2110.01052), [VerilogEval](https://github.com/NVlabs/verilog-eval), [RTLLM](https://github.com/hkust-zhiyao/RTLLM), [RTL-Repair](https://github.com/ekiwi/rtl-repair), [SWE-bench](https://www.swebench.com/original.html), [CVDP](https://github.com/NVlabs/cvdp_benchmark). Website structure references: [Nerfies](https://nerfies.github.io/), [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/), [SWE-bench](https://www.swebench.com/). The website is independently implemented; no template code or third-party visual assets were copied.
 
 See the website's artifacts section for the actual completion audit, data and report. Unfinished experimental stages are labeled explicitly until their audit passes.
+
+## RTL source and execution audit
+
+The original repair instruction required integrating the supplied immutable core and returning only the requested wrapper. The original simulation guard did not enforce core presence. The original independent cache run also encountered OSS generated-file overwrite failures after identical source uploads reset file modification times; those execution failures are not valid evidence of functional defects. A separate posthoc `source_contract_audit.json` checks this necessary source obligation, preserving original functional scores and decisions. Missing core instances cannot count as contract-correct adoption even if the behavior tests pass. An instance being present is a necessary check, not proof that every output depends on the core. The website distinguishes these counts.
+
+A separate `precision_revision/` reassesses all frozen final sources after supplying the simulator default `1ns/1ps`, prohibiting reuse of old compiled binaries, and preserving immutable, byte-verified source files so independent scoring does not trigger an unnecessary rebuild. It requalifies the references and injected faults, repeats development and independent seeds, and makes zero model calls. Original acceptance decisions remain frozen. The amendment does not undo failures already supplied to models as feedback; route comparisons retain this limitation. Standalone replacement modules do not become valid integrations merely because this execution correction lets them run.
+
+Optional scientific figure export requires matplotlib: `python plot_results.py`. The website also offers the resulting SVG files directly.
+
+The separate 12-case source-gated smoke retains the original broken integration context at each repair call, uses new development and independent seeds, and checks core omissions before simulation. It is a pipeline readiness check, not a comparison of method gains against the earlier run. Runtime credential loaders remain local; a fresh API execution also needs a configured adapter. The public standard-library reproduction commands validate saved evidence and do not pretend to rerun model calls.

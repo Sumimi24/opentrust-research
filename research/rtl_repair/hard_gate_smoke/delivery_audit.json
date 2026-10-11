@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "cases": 12,
+  "reference_seed_passes": 15,
+  "functional_fault_rejections": 3,
+  "source_gate_rejections": 3,
+  "source_and_selection_bound": true,
+  "development_only_feedback": true,
+  "actual_calls": 25,
+  "new_independent_seeds": [
+    31771,
+    43103,
+    54721
+  ],
+  "CPU_only": true,
+  "GPU_used": false,
+  "scope": "Pipeline smoke; not an effect-size or generalization claim",
+  "tasks": {
+    "dma_write": {
+      "n": 4,
+      "correct_adoption": 4,
+      "false_adoption": 0
+    },
+    "udp_rx_guard": {
+      "n": 4,
+      "correct_adoption": 2,
+      "false_adoption": 0
+    },
+    "icache_ctrl": {
+      "n": 4,
+      "correct_adoption": 2,
+      "false_adoption": 0
+    }
+  },
+  "independent_result_categories": {
+    "pass": 8,
+    "functional_assertion": 3,
+    "compile_or_runtime_error": 1
+  },
+  "residual_filesystem_errors": 0
+}

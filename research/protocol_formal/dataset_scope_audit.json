@@ -50,6 +50,36 @@
     "first_bad_event": 8,
     "unparseable_or_interface_failure": 1
   },
+  "actual_collection_costs": {
+    "produce": {
+      "actual_calls": 960,
+      "usage_available": 959,
+      "tokens": {
+        "prompt_tokens": 2219516,
+        "completion_tokens": 18411,
+        "total_tokens": 2237927
+      }
+    },
+    "review": {
+      "actual_calls": 2880,
+      "usage_available": 2880,
+      "tokens": {
+        "prompt_tokens": 6813342,
+        "completion_tokens": 48743,
+        "total_tokens": 6862085
+      }
+    },
+    "blind": {
+      "actual_calls": 720,
+      "usage_available": 718,
+      "tokens": {
+        "prompt_tokens": 1675775,
+        "completion_tokens": 14192,
+        "total_tokens": 1689967
+      }
+    }
+  },
+  "blind_analysis_reused_across_four_proposals": true,
   "generalization_scope": "New seeded event traces within the specified protocol families; parameter values overlap calibration and test. Not an unseen-parameter or unseen-project evaluation.",
   "selection_changed": false
 }

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "dma_write__reference",
+    "reference": true,
+    "pass_test": true,
+    "compiled": true,
+    "functional_rejection": false
+  },
+  {
+    "id": "udp_rx_guard__reference",
+    "reference": true,
+    "pass_test": true,
+    "compiled": true,
+    "functional_rejection": false
+  },
+  {
+    "id": "icache_ctrl__reference",
+    "reference": true,
+    "pass_test": true,
+    "compiled": true,
+    "functional_rejection": false
+  },
+  {
+    "id": "dma_write__fault0",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "dma_write__fault1",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "dma_write__fault2",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "dma_write__fault3_protection",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "dma_write__fault4",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "dma_write__fault5",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "udp_rx_guard__fault0",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "udp_rx_guard__fault1",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "udp_rx_guard__fault2",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "udp_rx_guard__fault3",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "udp_rx_guard__fault4",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "udp_rx_guard__fault5",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "icache_ctrl__fault0",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "icache_ctrl__fault1",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "icache_ctrl__fault2",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "icache_ctrl__fault3",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "icache_ctrl__fault4",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  },
+  {
+    "id": "icache_ctrl__fault5",
+    "reference": false,
+    "pass_test": false,
+    "compiled": true,
+    "functional_rejection": true
+  }
+]

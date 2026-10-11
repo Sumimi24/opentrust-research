@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-10-11T20:22:35.243326+00:00",
+  "purpose": "Pipeline smoke after moving original source obligations to a pre-execution gate; not an effect-size comparison with earlier runs.",
+  "cases": 12,
+  "tasks": [
+    "dma_write",
+    "udp_rx_guard",
+    "icache_ctrl"
+  ],
+  "fault_indices": {
+    "dma_write": 0,
+    "udp_rx_guard": 1,
+    "icache_ctrl": 2
+  },
+  "producers": [
+    "gpt-5.4",
+    "qwen3.8-max",
+    "deepseek-v4-pro",
+    "kimi-k2.5"
+  ],
+  "maximum_calls_per_case": 3,
+  "maximum_actual_calls": 36,
+  "repair_schedule": "Initial producer; next and following family in fixed cycle for calls 2 and 3, only after development rejection.",
+  "development_seeds": [
+    19139,
+    20353
+  ],
+  "independent_seeds": [
+    31771,
+    43103,
+    54721
+  ],
+  "selection_frozen_before_independent": true,
+  "no_transport_retry": true,
+  "qualification_before_model_calls": "Three references on all five fresh seeds; three selected functional faults on first development seed; explicit core-omission controls must fail source gate.",
+  "grader_sha256": "0d60314544961b1056a6c4a4dc0b527731f4fa1703daeaca5a3eb12e384c502f",
+  "source_gate": "Only specified wrapper module and necessary pinned core instance check; not proof that every output depends on the core. Simulation access and DPI are disallowed.",
+  "CPU_only": true,
+  "GPU_used": false,
+  "repair_context": "Original broken wrapper is retained at every repair call, alongside the current candidate and development-only feedback; no correct wrapper or independent feedback.",
+  "maximum_simultaneous_CPU_scores": 1,
+  "resource_note": "May overlap the separate execution-only reassessment; each simulation remains CPU-only and uses the same per-process resource limits.",
+  "status": "prospective_frozen_before_first_model_call",
+  "sha256": {
+    "cpu_grade.py": "0d60314544961b1056a6c4a4dc0b527731f4fa1703daeaca5a3eb12e384c502f",
+    "subsystem_tests.py": "24ee2c4994671f55627a2072729705e02d1822e75050c7e79e8c9280916750c8",
+    "interfaces.json": "a96d822dfd305a0f046f570cef9f30b7ff5c4f17e8ca367ed48d283d0fdd60d4",
+    "oracles.py": "03793e63bea07971d9967d92b552ea2b2653abd9393df2959b4c4aa011fe01a3",
+    "faults.json": "a97ca2f34a5cd3c82402393525790ac788a343ef4dc992592b8be0f6ffd6ba31",
+    "design.json": "d560611a78921bd84212ce3513dc9a830f081b98484b4fe5869c9602c1e875bf",
+    "api_config.json": "1bf64974f90a57c6929015ea809c6807a7827a55850d86e1fc8597de117c6918",
+    "run_repair_source.py": "9a0891a1c8bc1c960957a107213c2fc462b0014b13248363c31f4e4598fad93d",
+    "tasks/dma_write/contract.txt": "887b4c76903e5f0c83c5bb367c4c34de068f35366d689837598e534d1f26fe37",
+    "tasks/dma_write/fault0.sv": "f2b12e48a5a4a3da30d1eadaf1e6b147f0c6d4cef25ae137a24a5c105f4a0852",
+    "tasks/dma_write/omission_control.sv": "e232598df757dabef250584b98ec8e0f19c911be0f38e223eca02e67a48d9ce6",
+    "tasks/dma_write/reference.sv": "32abd10d4ebb46867f4b48732e0e6dbe8c7e3b4b70abfa97d664d16601bd6d7e",
+    "tasks/icache_ctrl/contract.txt": "fc1babe3c983cd0a82fdc38945b14bb142823f58d6d876e9be37b9c3e72c6c14",
+    "tasks/icache_ctrl/fault2.sv": "dbb4fb1e8fda69fd71720f52d194596b1eab1d580b65084d615f2760307f9e6a",
+    "tasks/icache_ctrl/omission_control.sv": "761b26f6ecfe040da03df69c409473100a1964ba3d68802091903057ba3a85de",
+    "tasks/icache_ctrl/reference.sv": "19eb4ee9647500bd90b47ee2dc30030e6154b6b938c7c74d6212b3f01ea10276",
+    "tasks/udp_rx_guard/contract.txt": "8125c84ac0424cb7cefd8219713b7b272238372ac46a990870e2ba089d113421",
+    "tasks/udp_rx_guard/fault1.sv": "4782067b021a255a82171bc0b138b1f0f88bad57e5ed7dc9c98b80fe0176910b",
+    "tasks/udp_rx_guard/omission_control.sv": "1bec4766e1636996e2a4f59819a384f93819077434d8aa787057c07d1fb1f32c",
+    "tasks/udp_rx_guard/reference.sv": "4c58120cbb699b3f1b386bbcec8e9d829ee366e47deade1da53f0335baccf061"
+  },
+  "initial_cases": 12,
+  "smoke_route_rows": 12,
+  "feedback": "development-only assertion/diagnostic and 12-event counterexample",
+  "cross_schedule": "next family in fixed GPT,Qwen,DeepSeek,Kimi cycle at call 2; following family at call 3",
+  "interpretation": "12-case pipeline smoke, no matched comparative effect-size claim",
+  "reference_wrapper_not_given": true
+}

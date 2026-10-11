@@ -1,0 +1,17 @@
+[
+  {
+    "task": "dma_write",
+    "status": "missing_upstream_core",
+    "source_sha256": "e232598df757dabef250584b98ec8e0f19c911be0f38e223eca02e67a48d9ce6"
+  },
+  {
+    "task": "udp_rx_guard",
+    "status": "missing_upstream_core",
+    "source_sha256": "1bec4766e1636996e2a4f59819a384f93819077434d8aa787057c07d1fb1f32c"
+  },
+  {
+    "task": "icache_ctrl",
+    "status": "missing_upstream_core",
+    "source_sha256": "761b26f6ecfe040da03df69c409473100a1964ba3d68802091903057ba3a85de"
+  }
+]

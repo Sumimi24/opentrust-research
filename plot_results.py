@@ -45,9 +45,10 @@ ax.grid(alpha=.2)
 fig.text(.13, -.045, 'Observed points. Three-reviewer agreement costs 3 reviews; other routes cost 1.\n51 parameter configurations overall; calibration/test parameters overlap. No deployment certificate.', fontsize=9)
 save(fig, 'risk-coverage')
 
-if data['rtl']['summary']['complete']:
-    audit = data['rtl']['audit']
-    fig, axes = plt.subplots(1, 3, figsize=(10, 3.9), sharey=True, layout='constrained')
+if data['rtl'].get('ready'):
+    audit = data['rtl']['precision_audit']
+    fig, axes = plt.subplots(1, 3, figsize=(10, 4.6), sharey=True)
+    fig.subplots_adjust(left=.08, right=.99, top=.81, bottom=.33, wspace=.12)
     methods = ['direct_patch', 'same_family_trace', 'cross_family_trace']
     for ax, (task, rows) in zip(axes, audit['tasks'].items()):
         values = [rows[m]['correct_adoption'] for m in methods]
@@ -56,8 +57,8 @@ if data['rtl']['summary']['complete']:
         ax.set_xticks(range(3), ['One call', 'Same family', 'Cross family'], rotation=25, ha='right')
         for i, value in enumerate(values):
             ax.text(i, value + .6, f'{value}/24', ha='center')
-    axes[0].set_ylabel('Development accepted and independently correct')
+    axes[0].set_ylabel('Correct adoption under declared checks')
     fig.suptitle('18 qualified injected wrapper faults, four producer interfaces')
-    fig.text(.06, -.045, 'Same/cross routes share initial repairs and have a maximum of 3 model calls.\nThree fixed contracts; fault count is not independent project count. CPU simulation only.', fontsize=9)
+    fig.text(.08, .035, 'Same/cross routes share initial repairs and have a maximum of 3 model calls.\nCorrected execution; original decisions frozen; necessary core-presence check included.\nThree fixed contracts; fault count is not independent project count. CPU simulation only.', fontsize=9)
     save(fig, 'rtl-correct-adoption')
 print(json.dumps({'figures': [p.name for p in OUT.glob('*.png')]}))

@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "initial_cases": 72,
+  "distinct_injected_faults": 18,
+  "base_contracts": 3,
+  "route_rows": 216,
+  "actual_calls": 272,
+  "api_statuses": {
+    "complete": 271,
+    "http_error": 1
+  },
+  "methods": {
+    "direct_patch": {
+      "n": 72,
+      "independent_pass": 8,
+      "correct_adoption": 8,
+      "false_adoption": 11,
+      "logical_calls": 72
+    },
+    "same_family_trace": {
+      "n": 72,
+      "independent_pass": 10,
+      "correct_adoption": 10,
+      "false_adoption": 15,
+      "logical_calls": 174
+    },
+    "cross_family_trace": {
+      "n": 72,
+      "independent_pass": 19,
+      "correct_adoption": 19,
+      "false_adoption": 12,
+      "logical_calls": 170
+    }
+  },
+  "CPU_only": true,
+  "GPU_used": false
+}

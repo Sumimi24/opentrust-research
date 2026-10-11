@@ -1,0 +1,218 @@
+[
+  {
+    "id": "dma_write__fault0",
+    "task": "dma_write",
+    "fault_label": "tag",
+    "source": "tasks/dma_write/fault0.sv",
+    "source_sha256": "f2b12e48a5a4a3da30d1eadaf1e6b147f0c6d4cef25ae137a24a5c105f4a0852",
+    "mutation": {
+      "before": ".s_axis_write_desc_tag(desc_tag)",
+      "after": ".s_axis_write_desc_tag(desc_tag ^ 8'h01)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "dma_write__fault1",
+    "task": "dma_write",
+    "fault_label": "length",
+    "source": "tasks/dma_write/fault1.sv",
+    "source_sha256": "b1d6f59bb7fdb1684ed70258dab5cc85beb36207ca06a0a8e8fd1a362e140ca5",
+    "mutation": {
+      "before": ".s_axis_write_desc_len(desc_len)",
+      "after": ".s_axis_write_desc_len(desc_len - 16'd1)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "dma_write__fault2",
+    "task": "dma_write",
+    "fault_label": "unaligned",
+    "source": "tasks/dma_write/fault2.sv",
+    "source_sha256": "322b2de9b37158c8dd2ee4a2af1fb997948b3cc61626af9fbf40fe054f2ecffa",
+    "mutation": {
+      "before": ".ENABLE_UNALIGNED(1)",
+      "after": ".ENABLE_UNALIGNED(0)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "dma_write__fault3_protection",
+    "task": "dma_write",
+    "fault_label": "protection_attribute",
+    "source": "tasks/dma_write/fault3_protection.sv",
+    "source_sha256": "212248174a6db31c54ac91448479fa11f57f67b71acabaae30d889c445d1d745",
+    "mutation": {
+      "before": "assign m_axi_awprot=3'b000;",
+      "after": "assign m_axi_awprot=3'b001;"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "dma_write__fault4",
+    "task": "dma_write",
+    "fault_label": "aligned_addr",
+    "source": "tasks/dma_write/fault4.sv",
+    "source_sha256": "b9e4b8a49b60a7a4a81e044709f3d3c9daeaf5d622bb56ee7e5e66cb760f878e",
+    "mutation": {
+      "before": ".s_axis_write_desc_addr(desc_addr)",
+      "after": ".s_axis_write_desc_addr(desc_addr & 16'hfffc)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "dma_write__fault5",
+    "task": "dma_write",
+    "fault_label": "error_priority",
+    "source": "tasks/dma_write/fault5.sv",
+    "source_sha256": "81322749b152f3e7300ccb34d9e49258c98fdf0c6671c2636f50f8ee94d1d471",
+    "mutation": {
+      "before": "seen_decerr ? 4'd7 : (seen_slverr ? 4'd6 : raw_error)",
+      "after": "seen_slverr ? 4'd6 : (seen_decerr ? 4'd7 : raw_error)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "udp_rx_guard__fault0",
+    "task": "udp_rx_guard",
+    "fault_label": "ip_checksum",
+    "source": "tasks/udp_rx_guard/fault0.sv",
+    "source_sha256": "fb8235eae869b385166e39b8ecbb8932fc91382d3930645fbe2a9b0eb3b8a318",
+    "mutation": {
+      "before": "if(fold(ip_sum)!=65535)error_code=3;",
+      "after": "if(1'b0)error_code=3;"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "udp_rx_guard__fault1",
+    "task": "udp_rx_guard",
+    "fault_label": "payload",
+    "source": "tasks/udp_rx_guard/fault1.sv",
+    "source_sha256": "4782067b021a255a82171bc0b138b1f0f88bad57e5ed7dc9c98b80fe0176910b",
+    "mutation": {
+      "before": ".s_ip_payload_axis_tdata(bytes[ptr])",
+      "after": ".s_ip_payload_axis_tdata(bytes[ptr] ^ 8'h01)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "udp_rx_guard__fault2",
+    "task": "udp_rx_guard",
+    "fault_label": "destination",
+    "source": "tasks/udp_rx_guard/fault2.sv",
+    "source_sha256": "17bb82ca25fe7f6f9a4f1d91225b8008ed9b42d0f2248102ab38c417f7ef9b6d",
+    "mutation": {
+      "before": "!=32'h0a000002",
+      "after": "!=32'h0a000003"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "udp_rx_guard__fault3",
+    "task": "udp_rx_guard",
+    "fault_label": "zero_checksum",
+    "source": "tasks/udp_rx_guard/fault3.sv",
+    "source_sha256": "9cd76a5dcfae6b1b378651c4234381a80ac80bf4fb06cb229da44c5fa9e947ba",
+    "mutation": {
+      "before": "word16(26)!=0 && fold(udp_sum)!=65535",
+      "after": "fold(udp_sum)!=65535"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "udp_rx_guard__fault4",
+    "task": "udp_rx_guard",
+    "fault_label": "udp_checksum",
+    "source": "tasks/udp_rx_guard/fault4.sv",
+    "source_sha256": "ffe87fcde14f00fa0008ed06864820ec92a92569786dae9396fb5c9f1fdc1c59",
+    "mutation": {
+      "before": "if(word16(26)!=0 && fold(udp_sum)!=65535)error_code=4;",
+      "after": "if(1'b0)error_code=4;"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "udp_rx_guard__fault5",
+    "task": "udp_rx_guard",
+    "fault_label": "short_payload",
+    "source": "tasks/udp_rx_guard/fault5.sv",
+    "source_sha256": "4ce17211ad884647e280711e084ef5032c1c0981abd1940740fd653230b31502",
+    "mutation": {
+      "before": "n<28 || n>512",
+      "after": "n<32 || n>512"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "icache_ctrl__fault0",
+    "task": "icache_ctrl",
+    "fault_label": "invalidate",
+    "source": "tasks/icache_ctrl/fault0.sv",
+    "source_sha256": "e5f424a2d152de7e786fcdfd33031e4fac8ccbbb24fd326eac597551ac74a074",
+    "mutation": {
+      "before": ".icache_inval_i(icache_inval_i)",
+      "after": ".icache_inval_i(1'b0)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "icache_ctrl__fault1",
+    "task": "icache_ctrl",
+    "fault_label": "branch",
+    "source": "tasks/icache_ctrl/fault1.sv",
+    "source_sha256": "e6954013640a496db460b967b5f24592613df17731c5b953847b05d7a62160db",
+    "mutation": {
+      "before": ".branch_i(branch_i)",
+      "after": ".branch_i(1'b0)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "icache_ctrl__fault2",
+    "task": "icache_ctrl",
+    "fault_label": "ready",
+    "source": "tasks/icache_ctrl/fault2.sv",
+    "source_sha256": "dbb4fb1e8fda69fd71720f52d194596b1eab1d580b65084d615f2760307f9e6a",
+    "mutation": {
+      "before": ".ready_i(ready_i)",
+      "after": ".ready_i(1'b1)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "icache_ctrl__fault3",
+    "task": "icache_ctrl",
+    "fault_label": "error",
+    "source": "tasks/icache_ctrl/fault3.sv",
+    "source_sha256": "74d810a622ec3ecb68c1eb2f03f72c68e988275ae42a570a47b218858e19de16",
+    "mutation": {
+      "before": ".instr_err_i(instr_err_i)",
+      "after": ".instr_err_i(1'b0)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "icache_ctrl__fault4",
+    "task": "icache_ctrl",
+    "fault_label": "request",
+    "source": "tasks/icache_ctrl/fault4.sv",
+    "source_sha256": "631f4559baaafe75596febae188b97ec314105dd1a54d9b8cd01dc815fc03ff3",
+    "mutation": {
+      "before": ".req_i(req_i)",
+      "after": ".req_i(1'b0)"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  },
+  {
+    "id": "icache_ctrl__fault5",
+    "task": "icache_ctrl",
+    "fault_label": "write",
+    "source": "tasks/icache_ctrl/fault5.sv",
+    "source_sha256": "a5e15890b4d7c6391324fa3b1080dbfb7fc853e467c7a745153ba59dd9aeb828",
+    "mutation": {
+      "before": "if(data_write)data_mem0[data_addr]<=data_wdata;",
+      "after": "if(1'b0)data_mem0[data_addr]<=data_wdata;"
+    },
+    "origin": "injected wrapper integration fault; not a historical upstream bug"
+  }
+]

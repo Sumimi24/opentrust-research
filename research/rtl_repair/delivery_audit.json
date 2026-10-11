@@ -1,0 +1,645 @@
+{
+  "passed": true,
+  "base_contracts": 3,
+  "injected_faults": 18,
+  "initial_repair_cases": 72,
+  "paired_rows": 216,
+  "reference_seed_passes": 15,
+  "functional_fault_rejections": 18,
+  "one_equivalent_mutation_excluded": true,
+  "selection_unchanged": true,
+  "independent_feedback_not_used": true,
+  "frozen_sources_unchanged": true,
+  "credential_scan_files": 1571,
+  "API_output_source_binding": true,
+  "actual_calls": 272,
+  "summary_recomputed": true,
+  "upstream_archives_and_four_core_sources_match_pinned_versions": true,
+  "usage_tokens": {
+    "prompt_tokens": 1246697,
+    "completion_tokens": 536067,
+    "total_tokens": 1782764
+  },
+  "API_reported_models": {
+    "gpt-5.4-2026-03-05": 58,
+    "qwen3.8-max": 70,
+    "deepseek-v4-pro": 64,
+    "kimi-k2.5": 79,
+    "unknown": 1
+  },
+  "fixed_GPT_three_call_control": {
+    "n": 18,
+    "correct_adoption": 8,
+    "false_adoption": 5,
+    "logical_calls": 32
+  },
+  "GPT_initial_paired_routes": {
+    "direct_patch": {
+      "n": 18,
+      "correct_adoption": 6,
+      "false_adoption": 4,
+      "logical_calls": 18
+    },
+    "same_family_trace": {
+      "n": 18,
+      "correct_adoption": 8,
+      "false_adoption": 5,
+      "logical_calls": 32
+    },
+    "cross_family_trace": {
+      "n": 18,
+      "correct_adoption": 7,
+      "false_adoption": 4,
+      "logical_calls": 33
+    }
+  },
+  "independent_result_categories": {
+    "direct_patch": {
+      "pass": 8,
+      "functional_contract": 20,
+      "compile_or_runtime": 20,
+      "simulation_time_precision": 7,
+      "environment_filesystem": 17
+    },
+    "same_family_trace": {
+      "pass": 10,
+      "functional_contract": 19,
+      "simulation_time_precision": 10,
+      "contract_gate:preprocessor_access": 2,
+      "compile_or_runtime": 10,
+      "environment_filesystem": 21
+    },
+    "cross_family_trace": {
+      "pass": 19,
+      "functional_contract": 14,
+      "API:http_error": 1,
+      "compile_or_runtime": 15,
+      "simulation_time_precision": 2,
+      "environment_filesystem": 21
+    }
+  },
+  "development_independent_disagreements": [
+    {
+      "case": "icache_ctrl__fault0__0",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "06d012126d641148ca1baa0ff902bcc96195963d9b4fd965303f01e07466fdb6"
+    },
+    {
+      "case": "icache_ctrl__fault0__0",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "06d012126d641148ca1baa0ff902bcc96195963d9b4fd965303f01e07466fdb6"
+    },
+    {
+      "case": "icache_ctrl__fault0__0",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "06d012126d641148ca1baa0ff902bcc96195963d9b4fd965303f01e07466fdb6"
+    },
+    {
+      "case": "icache_ctrl__fault0__1",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "ae7be791f6de71720e86570d97d001fb0575033c32611da03586cb14b9eb5978"
+    },
+    {
+      "case": "icache_ctrl__fault0__1",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "ae7be791f6de71720e86570d97d001fb0575033c32611da03586cb14b9eb5978"
+    },
+    {
+      "case": "icache_ctrl__fault0__1",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "ae7be791f6de71720e86570d97d001fb0575033c32611da03586cb14b9eb5978"
+    },
+    {
+      "case": "icache_ctrl__fault0__2",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "26b49e8d60413a457debede2b1ed0a9c822d95318c74fe54b4543ac61ab43f81"
+    },
+    {
+      "case": "icache_ctrl__fault0__2",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "26b49e8d60413a457debede2b1ed0a9c822d95318c74fe54b4543ac61ab43f81"
+    },
+    {
+      "case": "icache_ctrl__fault0__2",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "26b49e8d60413a457debede2b1ed0a9c822d95318c74fe54b4543ac61ab43f81"
+    },
+    {
+      "case": "icache_ctrl__fault1__0",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "3e818109cf08402305d531e033640f57598ddcea43cc22d134f544f39317098f"
+    },
+    {
+      "case": "icache_ctrl__fault1__1",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "9bd33ef19db4fe8330343607d74d72cb296d6108eed2efd6895ad94c47cfa73e"
+    },
+    {
+      "case": "icache_ctrl__fault1__2",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "e84a56d2377f91681841ad9149fd762e3b7642b928f645ad9503fd5ba9e9ac75"
+    },
+    {
+      "case": "icache_ctrl__fault1__2",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "e84a56d2377f91681841ad9149fd762e3b7642b928f645ad9503fd5ba9e9ac75"
+    },
+    {
+      "case": "icache_ctrl__fault1__2",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "e84a56d2377f91681841ad9149fd762e3b7642b928f645ad9503fd5ba9e9ac75"
+    },
+    {
+      "case": "icache_ctrl__fault2__2",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "bc2d3699a7edfb43301688190705378d56ee729627d9f44f01beb5b18c02f5c7"
+    },
+    {
+      "case": "icache_ctrl__fault2__2",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "bc2d3699a7edfb43301688190705378d56ee729627d9f44f01beb5b18c02f5c7"
+    },
+    {
+      "case": "icache_ctrl__fault2__2",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "bc2d3699a7edfb43301688190705378d56ee729627d9f44f01beb5b18c02f5c7"
+    },
+    {
+      "case": "icache_ctrl__fault3__0",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "9265e1a891ee54ab4900b9d69897ed8b07bf311e6d0513e2faff566a37b7eb88"
+    },
+    {
+      "case": "icache_ctrl__fault3__0",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "9265e1a891ee54ab4900b9d69897ed8b07bf311e6d0513e2faff566a37b7eb88"
+    },
+    {
+      "case": "icache_ctrl__fault3__0",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "9265e1a891ee54ab4900b9d69897ed8b07bf311e6d0513e2faff566a37b7eb88"
+    },
+    {
+      "case": "icache_ctrl__fault3__1",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "c6707316d9908b5a210eba83cb5ef0405c639400543135f8a47a43aee9f420af"
+    },
+    {
+      "case": "icache_ctrl__fault3__1",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "c6707316d9908b5a210eba83cb5ef0405c639400543135f8a47a43aee9f420af"
+    },
+    {
+      "case": "icache_ctrl__fault3__1",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "c6707316d9908b5a210eba83cb5ef0405c639400543135f8a47a43aee9f420af"
+    },
+    {
+      "case": "icache_ctrl__fault3__2",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "7cebd42588c2f4172078d33f45c0af52e373280bb4fa1d1c5237c40f9cc0122e"
+    },
+    {
+      "case": "icache_ctrl__fault3__2",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "7cebd42588c2f4172078d33f45c0af52e373280bb4fa1d1c5237c40f9cc0122e"
+    },
+    {
+      "case": "icache_ctrl__fault3__2",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "7cebd42588c2f4172078d33f45c0af52e373280bb4fa1d1c5237c40f9cc0122e"
+    },
+    {
+      "case": "icache_ctrl__fault3__3",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "6ea37385ee4bbba376a7f8ef0786d417de9f7a0f4b3dbb5bfff609acdb3bfcf8"
+    },
+    {
+      "case": "icache_ctrl__fault4__0",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "f837d219baeffbf4d5b7b0a3137ae1fb1e180070e787735366dce4d89d0d0f8d"
+    },
+    {
+      "case": "icache_ctrl__fault4__0",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "f837d219baeffbf4d5b7b0a3137ae1fb1e180070e787735366dce4d89d0d0f8d"
+    },
+    {
+      "case": "icache_ctrl__fault4__0",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "f837d219baeffbf4d5b7b0a3137ae1fb1e180070e787735366dce4d89d0d0f8d"
+    },
+    {
+      "case": "icache_ctrl__fault4__1",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "f480c8d85a6b36237397723d1e3d81ce1609a156367526fd6d4de94235f4ae1b"
+    },
+    {
+      "case": "icache_ctrl__fault4__1",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "f480c8d85a6b36237397723d1e3d81ce1609a156367526fd6d4de94235f4ae1b"
+    },
+    {
+      "case": "icache_ctrl__fault4__1",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "f480c8d85a6b36237397723d1e3d81ce1609a156367526fd6d4de94235f4ae1b"
+    },
+    {
+      "case": "icache_ctrl__fault4__2",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "670f98230c338e006fa5c0243590ccfdf925cb8b15cc7053ba65aa926c37593e"
+    },
+    {
+      "case": "icache_ctrl__fault4__3",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "974d0dd05cb4dc7472725913820437ce7ff04f3144bd97295bdf1958647d1f8d"
+    },
+    {
+      "case": "icache_ctrl__fault5__0",
+      "task": "icache_ctrl",
+      "method": "direct_patch",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "bcfaab61e7ed0ae178f35c9c78bb8df8501819d80e2d1032b31a9ca5d8aee80e"
+    },
+    {
+      "case": "icache_ctrl__fault5__0",
+      "task": "icache_ctrl",
+      "method": "same_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "bcfaab61e7ed0ae178f35c9c78bb8df8501819d80e2d1032b31a9ca5d8aee80e"
+    },
+    {
+      "case": "icache_ctrl__fault5__0",
+      "task": "icache_ctrl",
+      "method": "cross_family_trace",
+      "development_pass": true,
+      "independent_pass": false,
+      "source_sha256": "bcfaab61e7ed0ae178f35c9c78bb8df8501819d80e2d1032b31a9ca5d8aee80e"
+    }
+  ],
+  "cross_minus_same_correct_adoption_difference95": [
+    0.02777777777777779,
+    0.2222222222222222
+  ],
+  "tasks": {
+    "dma_write": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 7
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 7
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 13
+      }
+    },
+    "udp_rx_guard": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 1
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 3
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 6
+      }
+    },
+    "icache_ctrl": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 0
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 0
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 0
+      }
+    }
+  },
+  "source_contract_methods": {
+    "direct_patch": {
+      "n": 72,
+      "source_contract_valid": 52,
+      "correct_adoption": 8,
+      "false_adoption": 11,
+      "accepted_source_violations": 0
+    },
+    "same_family_trace": {
+      "n": 72,
+      "source_contract_valid": 46,
+      "correct_adoption": 9,
+      "false_adoption": 16,
+      "accepted_source_violations": 1
+    },
+    "cross_family_trace": {
+      "n": 72,
+      "source_contract_valid": 36,
+      "correct_adoption": 15,
+      "false_adoption": 16,
+      "accepted_source_violations": 4
+    }
+  },
+  "source_contract_tasks": {
+    "dma_write": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 7
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 7
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 13
+      }
+    },
+    "udp_rx_guard": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 1
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 2
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 2
+      }
+    },
+    "icache_ctrl": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 0
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 0
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 0
+      }
+    }
+  },
+  "source_contract_GPT_initial_routes": {
+    "direct_patch": {
+      "n": 18,
+      "correct_adoption": 6,
+      "false_adoption": 4,
+      "logical_calls": 18
+    },
+    "same_family_trace": {
+      "n": 18,
+      "correct_adoption": 7,
+      "false_adoption": 6,
+      "logical_calls": 32
+    },
+    "cross_family_trace": {
+      "n": 18,
+      "correct_adoption": 6,
+      "false_adoption": 5,
+      "logical_calls": 33
+    }
+  },
+  "source_contract_cross_minus_same_difference95": [
+    0.027777777777777762,
+    0.1388888888888889
+  ],
+  "final_development_time_precision_rows": [
+    {
+      "case": "dma_write__fault2__2",
+      "method": "direct_patch",
+      "task": "dma_write",
+      "core_instance_present": false
+    },
+    {
+      "case": "dma_write__fault2__2",
+      "method": "same_family_trace",
+      "task": "dma_write",
+      "core_instance_present": false
+    },
+    {
+      "case": "dma_write__fault3_protection__2",
+      "method": "same_family_trace",
+      "task": "dma_write",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault0__2",
+      "method": "direct_patch",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault0__2",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault0__3",
+      "method": "direct_patch",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault0__3",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault1__3",
+      "method": "direct_patch",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault1__3",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault2__2",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault2__3",
+      "method": "direct_patch",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault2__3",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault3__3",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault4__1",
+      "method": "cross_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault4__2",
+      "method": "cross_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault4__3",
+      "method": "direct_patch",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault4__3",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault5__3",
+      "method": "direct_patch",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    },
+    {
+      "case": "udp_rx_guard__fault5__3",
+      "method": "same_family_trace",
+      "task": "udp_rx_guard",
+      "core_instance_present": false
+    }
+  ],
+  "CPU_only": true,
+  "GPU_used": false,
+  "boundary": "Injection benchmark on three wrapper contracts; no historical bug, PPA, formal proof or whole-core claim"
+}

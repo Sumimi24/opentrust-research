@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-11T18:57:29.932967+00:00",
+  "reason": "Contract does not require a timescale directive; some compiled top modules default to 1 second precision and fail to represent the testbench 5 ns clock.",
+  "change": "Supply cocotb_test timescale=1ns/1ps and prohibit reuse of old compiled binaries; task stimulus, assertions, source selection, model calls and feedback unchanged.",
+  "original_grader_sha256": "c08c57ec0f25c53455c3e22f7aa5e1341c12d682d7f21ec964fc72dc78b054bd",
+  "revised_grader_sha256": "a49fb0b38e80073f7cb5b3dd98baa942143609ad28022f4f8f8b3eb66334c7ed",
+  "scope": "All 216 frozen final route rows on both development and independent seeds; references and qualified faults rechecked first; no new API calls.",
+  "interpretation": "Execution-only reassessment including default time precision and immutable source upload; original adoption decisions stay frozen. Regraded development success is diagnostic, not retroactive adoption. Corrections cannot undo previous execution failures already supplied as feedback.",
+  "status": "planned_before_reassessment",
+  "additional_execution_issue": "SFTP reupload of identical source resets its mtime and triggers a second Verilator compilation; OSS redirected generated C++ overwrite raises OSError errno22. Source filenames are now immutable content hashes, checked by reading bytes before reuse, in a fresh namespace.",
+  "driver_sha256": "f04f8f9cb5d965762c27b54f3aaf6017b8e3ecb44b3867c920161fe0f343ccbe"
+}

@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "initial_cases": 12,
+  "distinct_injected_faults": 3,
+  "base_contracts": 3,
+  "route_rows": 12,
+  "actual_calls": 25,
+  "api_statuses": {
+    "complete": 25
+  },
+  "methods": {
+    "cross_family_trace": {
+      "n": 12,
+      "independent_pass": 8,
+      "correct_adoption": 8,
+      "false_adoption": 0,
+      "logical_calls": 25
+    }
+  },
+  "CPU_only": true,
+  "GPU_used": false
+}

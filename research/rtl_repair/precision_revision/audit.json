@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "rows": 216,
+  "reference_seed_passes": 15,
+  "functional_fault_rejections": 18,
+  "source_and_selection_unchanged": true,
+  "task_assertions_unchanged": true,
+  "isolated_grader_revision": true,
+  "immutable_source_upload": true,
+  "model_calls": 0,
+  "residual_time_precision_errors": 0,
+  "residual_filesystem_errors": 0,
+  "interpretation": "Execution-only reassessment including default time precision and immutable source upload; original adoption decisions stay frozen. Regraded development success is diagnostic, not retroactive adoption. Corrections cannot undo previous execution failures already supplied as feedback.",
+  "tasks": {
+    "dma_write": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 7
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 7
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 13
+      }
+    },
+    "udp_rx_guard": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 1
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 2
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 2
+      }
+    },
+    "icache_ctrl": {
+      "direct_patch": {
+        "n": 24,
+        "correct_adoption": 11
+      },
+      "same_family_trace": {
+        "n": 24,
+        "correct_adoption": 15
+      },
+      "cross_family_trace": {
+        "n": 24,
+        "correct_adoption": 12
+      }
+    }
+  },
+  "GPT_initial_paired_routes": {
+    "direct_patch": {
+      "n": 18,
+      "correct_adoption": 10,
+      "false_adoption": 0,
+      "logical_calls": 18
+    },
+    "same_family_trace": {
+      "n": 18,
+      "correct_adoption": 12,
+      "false_adoption": 1,
+      "logical_calls": 32
+    },
+    "cross_family_trace": {
+      "n": 18,
+      "correct_adoption": 10,
+      "false_adoption": 1,
+      "logical_calls": 33
+    }
+  },
+  "cross_minus_same_correct_adoption_difference95": [
+    -0.04166666666666663,
+    0.11111111111111116
+  ]
+}
