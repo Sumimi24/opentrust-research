@@ -1,7 +1,8 @@
 # 大语言模型辅助工程设计中的执行反馈与审查——配电与供水网络的对照研究
 
 <!-- CURRENT_ENGINEERING_RELEASE -->
-2026-10-15 修订。当前研究是配电与供水设备控制设计的同起点评估。
+2026-10-15 修订。本文通过 API 调用现有大语言模型开展配电与供水设备控制设计的同起点对照研究。
+模型负责生成、选测、审查与修订，工程仿真负责动作执行与评分。现有仓库名称仅为材料托管标识，不是本文的方法或框架名称。
 主论文及参考文献共 5 页，必要附录单独提供；新增双域最小 CPU 重放示例。
 本次更新没有重新调用模型，也没有增加模型性能样本。
 
@@ -52,7 +53,7 @@ python run_demo.py
 
 Research report and reproducible artifacts. This repository does not claim an accepted publication, universal model advantage, a 95% deployment certificate, formal hardware correctness, or PPA results.
 
-The website is in `docs/` and is intended for GitHub Pages. It presents a single research line: **explicit contracts → model analysis/generation → review/development feedback → independent executable truth → measured adoption quality**. Related literature and earlier work remain visible.
+The earlier protocol and RTL studies are preserved in `docs/historical-protocol-rtl.html`. Their tasks, validation procedures and results are separate from the current power and water design study.
 
 ## New experiments
 
