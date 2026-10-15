@@ -1,4 +1,54 @@
-# OpenTrust: executable evidence for model analysis and RTL repair
+# OpenTrust：工程设计中可执行反馈的作用与边界
+
+<!-- CURRENT_ENGINEERING_RELEASE -->
+2026-10-15 修订。当前研究是配电与供水设备控制设计的同起点评估。
+主论文及参考文献共 5 页，必要附录单独提供；新增双域最小 CPU 重放示例。
+本次更新没有重新调用模型，也没有增加模型性能样本。
+
+- [研究主页与下载](https://sumimi24.github.io/opentrust-research/)
+- [精简论文](docs/materials/ai4e-paper.pdf) · [附录](docs/materials/ai4e-supplement.pdf) · [完整稿](docs/materials/ai4e-paper-with-appendix.pdf)
+- [论文 LaTeX 源码及分析](docs/materials/ai4e-source.zip)
+- [海报 PDF](docs/materials/ai4e-poster.pdf) · [可编辑 PPTX](docs/materials/ai4e-poster.pptx)
+- [最小 CPU 示例源码](examples/engineering-replay/) · [示例 ZIP](docs/materials/engineering-replay.zip)
+
+## 已完成的研究与证据
+
+16 个筛选后网络（13 配电、3 供水），3 种声明配置各重复 2 次，形成 96 个共同起点和 672 条相关路线。
+候选反馈使完整合同合格数由同配置的 46/96 增至 64/96，跨配置的 44/96 增至 65/96；收益主要来自配电。
+8 个保留工况全部通过的数量分别为 51→68、46→70。完整审查与屏蔽完整审查均为 64/96，不能据此证明审查等效或普遍无效。
+旧供水独立批次有 6/24 条标签因动作语义复评改变，不能并入当前 96 个起点。
+CPU 参照的预算和结构重置权限不同，当前结果不证明完整模型流程优于工程优化。
+
+## 不调用模型的物理重放
+
+使用 Python 3.12：
+
+```sh
+cd examples/engineering-replay
+python -m pip install -r requirements.txt
+python run_demo.py
+```
+
+示例包含一个 Kerber 配电网和一个 Net1 供水网、合同、两组初始与最终方案。
+4 份记录各运行 16 个工况，共 64 次场景评估；配电两阶段方案相同。
+标签、逐项检查和数值测量均与冻结记录匹配。已验证原环境、异目录解压，以及同一 Windows 机器上禁用系统包的新建虚拟环境安装和重放。
+该验证不涉及新模型调用、另一台机器、跨操作系统或独立物理求解器。
+
+可用 `--case Net1 --design candidate.json` 评分自己的方案，输入格式见示例 README。
+新增网络仍需定义批准动作、工况、物理约束与资格检查；示例不是任意模型/网络的自动接入平台。
+
+## 许可和研究边界
+
+新增示例代码采用其目录中的 MIT 许可。第三方网络、依赖、论文和实验记录不因该许可而被重新授权，详见示例 `THIRD_PARTY_NOTICES.md`。
+没有发布私人交接手册、访问凭据或完整私有请求日志。
+公开保留工况供复核使用，新的最终评估应建立独立条件。论文、网站与模型名称均不表示已录用、后端权重已认证或获得现场安全保证。
+
+## 历史研究
+
+以下保留先前协议与 RTL 研究说明，其样本与结果独立于当前工程设计研究。
+
+<!-- HISTORICAL_RESEARCH -->
+### Earlier protocol and RTL studies
 
 Research report and reproducible artifacts. This repository does not claim an accepted publication, universal model advantage, a 95% deployment certificate, formal hardware correctness, or PPA results.
 

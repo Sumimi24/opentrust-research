@@ -1,0 +1,4721 @@
+[
+  {
+    "task": "kerber_overhead",
+    "producer": "gpt-5.4",
+    "repeat": 0,
+    "method": "tool_same",
+    "initial": {
+      "parallel_lines": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "transformer_parallel": 3,
+      "tap_schedule": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "final": {
+      "parallel_lines": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "transformer_parallel": 3,
+      "tap_schedule": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": {
+      "initial": {
+        "passed": true,
+        "contract_errors": [],
+        "tests": [
+          {
+            "scenario": "normal_day",
+            "metrics": {
+              "voltage_min": 0.9626249688386818,
+              "voltage_max": 1.0,
+              "line_loading_max": 34.58583392469006,
+              "transformer_loading_max": 40.67363106659439,
+              "estimated_24h_line_loss_mwh": 0.04755583097014762,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9816268177168819,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.07205424647085,
+                    "transformer_loading_max": 20.197554100135672,
+                    "loss_mw": 0.0009289481321174582,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9626249688386818,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 34.58583392469006,
+                    "transformer_loading_max": 40.67363106659439,
+                    "loss_mw": 0.003828601692183258,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9882491128229381,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.926375672454448,
+                    "transformer_loading_max": 13.012489093837909,
+                    "loss_mw": 0.0003799666138120106,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.968125701681559,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.534251345657037,
+                    "transformer_loading_max": 34.7676041596416,
+                    "loss_mw": 0.00278845539024521,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "peak_day",
+            "metrics": {
+              "voltage_min": 0.9610741027248626,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.00736047067116,
+              "transformer_loading_max": 42.33560102562107,
+              "estimated_24h_line_loss_mwh": 0.05154416596693222,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9808799155835186,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.763838842627397,
+                    "transformer_loading_max": 21.006343007994573,
+                    "loss_mw": 0.001005922492809153,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9610741027248626,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.00736047067116,
+                    "transformer_loading_max": 42.33560102562107,
+                    "loss_mw": 0.004151230206433709,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9877750661760644,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.36702564839391,
+                    "transformer_loading_max": 13.527658561590124,
+                    "loss_mw": 0.00041127430322101654,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9668108947189977,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 30.74306281352638,
+                    "transformer_loading_max": 36.180878154462114,
+                    "loss_mw": 0.0030222673253581574,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "renewable_day",
+            "metrics": {
+              "voltage_min": 0.9645569494346786,
+              "voltage_max": 1.0,
+              "line_loading_max": 32.81331150543318,
+              "transformer_loading_max": 38.60129668042798,
+              "estimated_24h_line_loss_mwh": 0.042807502539889956,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.982558955970308,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.2083157631097,
+                    "transformer_loading_max": 19.187729272605317,
+                    "loss_mw": 0.0008371575362425736,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9645569494346786,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 32.81331150543318,
+                    "transformer_loading_max": 38.60129668042798,
+                    "loss_mw": 0.0034447413022714486,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9888410767787443,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.375959528402415,
+                    "transformer_loading_max": 12.368992508614987,
+                    "loss_mw": 0.00034260517283657595,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9697645036628378,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 28.02636641237175,
+                    "transformer_loading_max": 33.004671010124845,
+                    "loss_mw": 0.002510079745297728,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "spatial_day",
+            "metrics": {
+              "voltage_min": 0.9618715755430206,
+              "voltage_max": 1.0,
+              "line_loading_max": 35.14118019616405,
+              "transformer_loading_max": 41.32291235323576,
+              "estimated_24h_line_loss_mwh": 0.04836521239596983,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9817228296932444,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.032104750827557,
+                    "transformer_loading_max": 20.150847119322126,
+                    "loss_mw": 0.0009204530059683299,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9618715755430206,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 35.14118019616405,
+                    "transformer_loading_max": 41.32291235323576,
+                    "loss_mw": 0.003969136688560047,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9884228561274471,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.808386658330182,
+                    "transformer_loading_max": 12.874546797563768,
+                    "loss_mw": 0.0003715437745227543,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9679894716148127,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.766555841001008,
+                    "transformer_loading_max": 35.03919829403265,
+                    "loss_mw": 0.002799735263610506,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "transformer_outage",
+            "metrics": {
+              "voltage_min": 0.9599142538584577,
+              "voltage_max": 1.0,
+              "line_loading_max": 34.68099401193333,
+              "transformer_loading_max": 61.0582908721771,
+              "estimated_24h_line_loss_mwh": 0.04776126563663312,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9816268177168819,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.07205424647085,
+                    "transformer_loading_max": 20.197554100135672,
+                    "loss_mw": 0.0009289481321174582,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9599142538584577,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 34.68099401193333,
+                    "transformer_loading_max": 61.0582908721771,
+                    "loss_mw": 0.0038498730695222284,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9882491128229381,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.926375672454448,
+                    "transformer_loading_max": 13.012489093837909,
+                    "loss_mw": 0.0003799666138120106,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9658483002518542,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.602369464370458,
+                    "transformer_loading_max": 52.151836694447255,
+                    "loss_mw": 0.0028014231239871564,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "line_outage",
+            "metrics": {
+              "voltage_min": 0.9606592885591934,
+              "voltage_max": 1.0,
+              "line_loading_max": 51.98218197259729,
+              "transformer_loading_max": 40.754277897730184,
+              "estimated_24h_line_loss_mwh": 0.050068993255451034,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9816268177168819,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.07205424647085,
+                    "transformer_loading_max": 20.197554100135672,
+                    "loss_mw": 0.0009289481321174582,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9606592885591934,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 51.98218197259729,
+                    "transformer_loading_max": 40.754277897730184,
+                    "loss_mw": 0.004210522289931752,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.987646885820304,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.399477408257223,
+                    "transformer_loading_max": 13.020225551850054,
+                    "loss_mw": 0.0004169063969474184,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.968125701681559,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.534251345657037,
+                    "transformer_loading_max": 34.7676041596416,
+                    "loss_mw": 0.00278845539024521,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "compound_outage",
+            "metrics": {
+              "voltage_min": 0.9585471064664887,
+              "voltage_max": 1.0,
+              "line_loading_max": 47.93268247663702,
+              "transformer_loading_max": 60.65836475413764,
+              "estimated_24h_line_loss_mwh": 0.04906656077772885,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9813544785787361,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.274230857222193,
+                    "transformer_loading_max": 20.43392604065704,
+                    "loss_mw": 0.0009539860257538769,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9585471064664887,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 47.93268247663702,
+                    "transformer_loading_max": 60.65836475413764,
+                    "loss_mw": 0.004109243420037212,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "1"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9882121198526164,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.99098426901105,
+                    "transformer_loading_max": 13.0880228664306,
+                    "loss_mw": 0.0003810947373518933,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9683908412834121,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.3552768264079,
+                    "transformer_loading_max": 34.55835527846043,
+                    "loss_mw": 0.002733435946478492,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "light_load_day",
+            "metrics": {
+              "voltage_min": 0.9664816668718078,
+              "voltage_max": 1.0,
+              "line_loading_max": 31.045615418231993,
+              "transformer_loading_max": 36.5346056083453,
+              "estimated_24h_line_loss_mwh": 0.03832060532756691,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9834894469738462,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 15.345674828865757,
+                    "transformer_loading_max": 18.179189195773514,
+                    "loss_mw": 0.0007502658066281349,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9664816668718078,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 31.045615418231993,
+                    "transformer_loading_max": 36.5346056083453,
+                    "loss_mw": 0.0030822719095617967,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.989432382262463,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 9.825982498922972,
+                    "transformer_loading_max": 11.726011730858913,
+                    "loss_mw": 0.00030720879425580674,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9713981193843406,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 26.52193052992044,
+                    "transformer_loading_max": 31.245771117414378,
+                    "loss_mw": 0.0022470210441487472,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_normal",
+            "metrics": {
+              "voltage_min": 0.9614408384965971,
+              "voltage_max": 1.0,
+              "line_loading_max": 35.51901876971352,
+              "transformer_loading_max": 41.76466259996744,
+              "estimated_24h_line_loss_mwh": 0.05059686433413588,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.981057361142063,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.549002559623826,
+                    "transformer_loading_max": 20.755170897229416,
+                    "loss_mw": 0.0009840529634023744,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9614408384965971,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 35.51901876971352,
+                    "transformer_loading_max": 41.76466259996744,
+                    "loss_mw": 0.004085017871302729,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.98800425545109,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.013675977489006,
+                    "transformer_loading_max": 13.114554339527873,
+                    "loss_mw": 0.0003917025320223323,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9671291609140886,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 30.562141883232393,
+                    "transformer_loading_max": 35.96935426537779,
+                    "loss_mw": 0.0029720373556285443,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_peak",
+            "metrics": {
+              "voltage_min": 0.9602631509878627,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.13483768253205,
+              "transformer_loading_max": 42.484646741533,
+              "estimated_24h_line_loss_mwh": 0.054110653358291544,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9802325328568559,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 18.257511026372335,
+                    "transformer_loading_max": 21.583514959259862,
+                    "loss_mw": 0.0010790287807033762,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9602631509878627,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.13483768253205,
+                    "transformer_loading_max": 42.484646741533,
+                    "loss_mw": 0.004263860450648811,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9873680493061279,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.802469556661785,
+                    "transformer_loading_max": 14.036742035752871,
+                    "loss_mw": 0.00044059868776910073,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.965753855632209,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 32.02570089938745,
+                    "transformer_loading_max": 37.6804624592931,
+                    "loss_mw": 0.0032349543072606353,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_renewable",
+            "metrics": {
+              "voltage_min": 0.9649650092637675,
+              "voltage_max": 1.0,
+              "line_loading_max": 32.55759580374431,
+              "transformer_loading_max": 38.30232675590537,
+              "estimated_24h_line_loss_mwh": 0.04083186256302766,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9829201864879165,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 15.673843129562586,
+                    "transformer_loading_max": 18.562862735285552,
+                    "loss_mw": 0.0007942034829248731,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9649650092637675,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 32.55759580374431,
+                    "transformer_loading_max": 38.30232675590537,
+                    "loss_mw": 0.0033744106734164333,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9889837306002172,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.319208478545622,
+                    "transformer_loading_max": 12.302643487747554,
+                    "loss_mw": 0.0003353153719881548,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9711679235770796,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 27.02893703059915,
+                    "transformer_loading_max": 31.838530444522892,
+                    "loss_mw": 0.0023013808988418157,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_transformer",
+            "metrics": {
+              "voltage_min": 0.9583486064989896,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.34675758569339,
+              "transformer_loading_max": 63.97955925474594,
+              "estimated_24h_line_loss_mwh": 0.050465503010845784,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9795775600919442,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.853978162263502,
+                    "transformer_loading_max": 31.548539998099727,
+                    "loss_mw": 0.0010096590962184633,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9583486064989896,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.34675758569339,
+                    "transformer_loading_max": 63.97955925474594,
+                    "loss_mw": 0.004171192849702918,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9883526908732703,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.991066275110036,
+                    "transformer_loading_max": 13.088117768278737,
+                    "loss_mw": 0.0003773433721010796,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9656156066613626,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 30.039325564086194,
+                    "transformer_loading_max": 52.918129598537554,
+                    "loss_mw": 0.0028527218504518365,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_line",
+            "metrics": {
+              "voltage_min": 0.9621355897104286,
+              "voltage_max": 1.0,
+              "line_loading_max": 50.84544878874334,
+              "transformer_loading_max": 39.86826742457141,
+              "estimated_24h_line_loss_mwh": 0.048960103042978986,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9804161285137122,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 26.252925625055884,
+                    "transformer_loading_max": 20.700172953267018,
+                    "loss_mw": 0.001054712808205782,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9621355897104286,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 50.84544878874334,
+                    "transformer_loading_max": 39.86826742457141,
+                    "loss_mw": 0.003950199727279771,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9879012321468545,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.20938616213517,
+                    "transformer_loading_max": 12.872065730886753,
+                    "loss_mw": 0.0004026393153252969,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9682451162239939,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.219320578699865,
+                    "transformer_loading_max": 34.39940723981578,
+                    "loss_mw": 0.002752465323018982,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_compound",
+            "metrics": {
+              "voltage_min": 0.9584197934103508,
+              "voltage_max": 1.0,
+              "line_loading_max": 48.380216235180725,
+              "transformer_loading_max": 61.13395940874168,
+              "estimated_24h_line_loss_mwh": 0.051614644883478826,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9820602962617064,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.918053783979193,
+                    "transformer_loading_max": 20.017504180532594,
+                    "loss_mw": 0.0008952524589707338,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9584197934103508,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 48.380216235180725,
+                    "transformer_loading_max": 61.13395940874168,
+                    "loss_mw": 0.004134494310659029,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "1"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9881692934800881,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.932438126276315,
+                    "transformer_loading_max": 13.019577518606114,
+                    "loss_mw": 0.0003832403449136367,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9634162144469428,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 42.18063530306592,
+                    "transformer_loading_max": 53.41856619018911,
+                    "loss_mw": 0.0031894536993697393,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "1"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_low",
+            "metrics": {
+              "voltage_min": 0.9658271319337678,
+              "voltage_max": 1.0,
+              "line_loading_max": 31.45095614729226,
+              "transformer_loading_max": 37.00850932695494,
+              "estimated_24h_line_loss_mwh": 0.039201215666101324,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9834349093766245,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 15.527981756876969,
+                    "transformer_loading_max": 18.392328127584715,
+                    "loss_mw": 0.0007596761892973954,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9658271319337678,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 31.45095614729226,
+                    "transformer_loading_max": 37.00850932695494,
+                    "loss_mw": 0.003187650205846583,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9890464096378696,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.168823320702193,
+                    "transformer_loading_max": 12.126828497984429,
+                    "loss_mw": 0.00032986231407201166,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9713177298579878,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 26.69475194236817,
+                    "transformer_loading_max": 31.447821795703977,
+                    "loss_mw": 0.0022563472351342304,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_mixed",
+            "metrics": {
+              "voltage_min": 0.9607757754682927,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.20969695402726,
+              "transformer_loading_max": 42.57216263556928,
+              "estimated_24h_line_loss_mwh": 0.05251316130646584,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9811444480826759,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.383111202182754,
+                    "transformer_loading_max": 20.56122275933522,
+                    "loss_mw": 0.0009722896732283675,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9607757754682927,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.20969695402726,
+                    "transformer_loading_max": 42.57216263556928,
+                    "loss_mw": 0.004211151703417761,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9881845633727995,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.03827366849782,
+                    "transformer_loading_max": 13.14330922085189,
+                    "loss_mw": 0.00038346552776419296,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.965715359597441,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 31.196213181311762,
+                    "transformer_loading_max": 36.71068259709358,
+                    "loss_mw": 0.0031852866466673176,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          }
+        ]
+      },
+      "final": {
+        "passed": true,
+        "contract_errors": [],
+        "tests": [
+          {
+            "scenario": "normal_day",
+            "metrics": {
+              "voltage_min": 0.9626249688386818,
+              "voltage_max": 1.0,
+              "line_loading_max": 34.58583392469006,
+              "transformer_loading_max": 40.67363106659439,
+              "estimated_24h_line_loss_mwh": 0.04755583097014762,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9816268177168819,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.07205424647085,
+                    "transformer_loading_max": 20.197554100135672,
+                    "loss_mw": 0.0009289481321174582,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9626249688386818,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 34.58583392469006,
+                    "transformer_loading_max": 40.67363106659439,
+                    "loss_mw": 0.003828601692183258,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9882491128229381,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.926375672454448,
+                    "transformer_loading_max": 13.012489093837909,
+                    "loss_mw": 0.0003799666138120106,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.968125701681559,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.534251345657037,
+                    "transformer_loading_max": 34.7676041596416,
+                    "loss_mw": 0.00278845539024521,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "peak_day",
+            "metrics": {
+              "voltage_min": 0.9610741027248626,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.00736047067116,
+              "transformer_loading_max": 42.33560102562107,
+              "estimated_24h_line_loss_mwh": 0.05154416596693222,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9808799155835186,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.763838842627397,
+                    "transformer_loading_max": 21.006343007994573,
+                    "loss_mw": 0.001005922492809153,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9610741027248626,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.00736047067116,
+                    "transformer_loading_max": 42.33560102562107,
+                    "loss_mw": 0.004151230206433709,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9877750661760644,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.36702564839391,
+                    "transformer_loading_max": 13.527658561590124,
+                    "loss_mw": 0.00041127430322101654,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9668108947189977,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 30.74306281352638,
+                    "transformer_loading_max": 36.180878154462114,
+                    "loss_mw": 0.0030222673253581574,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "renewable_day",
+            "metrics": {
+              "voltage_min": 0.9645569494346786,
+              "voltage_max": 1.0,
+              "line_loading_max": 32.81331150543318,
+              "transformer_loading_max": 38.60129668042798,
+              "estimated_24h_line_loss_mwh": 0.042807502539889956,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.982558955970308,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.2083157631097,
+                    "transformer_loading_max": 19.187729272605317,
+                    "loss_mw": 0.0008371575362425736,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9645569494346786,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 32.81331150543318,
+                    "transformer_loading_max": 38.60129668042798,
+                    "loss_mw": 0.0034447413022714486,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9888410767787443,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.375959528402415,
+                    "transformer_loading_max": 12.368992508614987,
+                    "loss_mw": 0.00034260517283657595,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9697645036628378,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 28.02636641237175,
+                    "transformer_loading_max": 33.004671010124845,
+                    "loss_mw": 0.002510079745297728,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "spatial_day",
+            "metrics": {
+              "voltage_min": 0.9618715755430206,
+              "voltage_max": 1.0,
+              "line_loading_max": 35.14118019616405,
+              "transformer_loading_max": 41.32291235323576,
+              "estimated_24h_line_loss_mwh": 0.04836521239596983,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9817228296932444,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.032104750827557,
+                    "transformer_loading_max": 20.150847119322126,
+                    "loss_mw": 0.0009204530059683299,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9618715755430206,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 35.14118019616405,
+                    "transformer_loading_max": 41.32291235323576,
+                    "loss_mw": 0.003969136688560047,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9884228561274471,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.808386658330182,
+                    "transformer_loading_max": 12.874546797563768,
+                    "loss_mw": 0.0003715437745227543,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9679894716148127,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.766555841001008,
+                    "transformer_loading_max": 35.03919829403265,
+                    "loss_mw": 0.002799735263610506,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "transformer_outage",
+            "metrics": {
+              "voltage_min": 0.9599142538584577,
+              "voltage_max": 1.0,
+              "line_loading_max": 34.68099401193333,
+              "transformer_loading_max": 61.0582908721771,
+              "estimated_24h_line_loss_mwh": 0.04776126563663312,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9816268177168819,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.07205424647085,
+                    "transformer_loading_max": 20.197554100135672,
+                    "loss_mw": 0.0009289481321174582,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9599142538584577,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 34.68099401193333,
+                    "transformer_loading_max": 61.0582908721771,
+                    "loss_mw": 0.0038498730695222284,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9882491128229381,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.926375672454448,
+                    "transformer_loading_max": 13.012489093837909,
+                    "loss_mw": 0.0003799666138120106,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9658483002518542,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.602369464370458,
+                    "transformer_loading_max": 52.151836694447255,
+                    "loss_mw": 0.0028014231239871564,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "line_outage",
+            "metrics": {
+              "voltage_min": 0.9606592885591934,
+              "voltage_max": 1.0,
+              "line_loading_max": 51.98218197259729,
+              "transformer_loading_max": 40.754277897730184,
+              "estimated_24h_line_loss_mwh": 0.050068993255451034,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9816268177168819,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.07205424647085,
+                    "transformer_loading_max": 20.197554100135672,
+                    "loss_mw": 0.0009289481321174582,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9606592885591934,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 51.98218197259729,
+                    "transformer_loading_max": 40.754277897730184,
+                    "loss_mw": 0.004210522289931752,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.987646885820304,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.399477408257223,
+                    "transformer_loading_max": 13.020225551850054,
+                    "loss_mw": 0.0004169063969474184,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.968125701681559,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.534251345657037,
+                    "transformer_loading_max": 34.7676041596416,
+                    "loss_mw": 0.00278845539024521,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "compound_outage",
+            "metrics": {
+              "voltage_min": 0.9585471064664887,
+              "voltage_max": 1.0,
+              "line_loading_max": 47.93268247663702,
+              "transformer_loading_max": 60.65836475413764,
+              "estimated_24h_line_loss_mwh": 0.04906656077772885,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9813544785787361,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.274230857222193,
+                    "transformer_loading_max": 20.43392604065704,
+                    "loss_mw": 0.0009539860257538769,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9585471064664887,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 47.93268247663702,
+                    "transformer_loading_max": 60.65836475413764,
+                    "loss_mw": 0.004109243420037212,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "1"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9882121198526164,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.99098426901105,
+                    "transformer_loading_max": 13.0880228664306,
+                    "loss_mw": 0.0003810947373518933,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9683908412834121,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.3552768264079,
+                    "transformer_loading_max": 34.55835527846043,
+                    "loss_mw": 0.002733435946478492,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "light_load_day",
+            "metrics": {
+              "voltage_min": 0.9664816668718078,
+              "voltage_max": 1.0,
+              "line_loading_max": 31.045615418231993,
+              "transformer_loading_max": 36.5346056083453,
+              "estimated_24h_line_loss_mwh": 0.03832060532756691,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9834894469738462,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 15.345674828865757,
+                    "transformer_loading_max": 18.179189195773514,
+                    "loss_mw": 0.0007502658066281349,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9664816668718078,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 31.045615418231993,
+                    "transformer_loading_max": 36.5346056083453,
+                    "loss_mw": 0.0030822719095617967,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.989432382262463,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 9.825982498922972,
+                    "transformer_loading_max": 11.726011730858913,
+                    "loss_mw": 0.00030720879425580674,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9713981193843406,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 26.52193052992044,
+                    "transformer_loading_max": 31.245771117414378,
+                    "loss_mw": 0.0022470210441487472,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_normal",
+            "metrics": {
+              "voltage_min": 0.9614408384965971,
+              "voltage_max": 1.0,
+              "line_loading_max": 35.51901876971352,
+              "transformer_loading_max": 41.76466259996744,
+              "estimated_24h_line_loss_mwh": 0.05059686433413588,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.981057361142063,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.549002559623826,
+                    "transformer_loading_max": 20.755170897229416,
+                    "loss_mw": 0.0009840529634023744,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9614408384965971,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 35.51901876971352,
+                    "transformer_loading_max": 41.76466259996744,
+                    "loss_mw": 0.004085017871302729,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.98800425545109,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.013675977489006,
+                    "transformer_loading_max": 13.114554339527873,
+                    "loss_mw": 0.0003917025320223323,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9671291609140886,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 30.562141883232393,
+                    "transformer_loading_max": 35.96935426537779,
+                    "loss_mw": 0.0029720373556285443,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_peak",
+            "metrics": {
+              "voltage_min": 0.9602631509878627,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.13483768253205,
+              "transformer_loading_max": 42.484646741533,
+              "estimated_24h_line_loss_mwh": 0.054110653358291544,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9802325328568559,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 18.257511026372335,
+                    "transformer_loading_max": 21.583514959259862,
+                    "loss_mw": 0.0010790287807033762,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9602631509878627,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.13483768253205,
+                    "transformer_loading_max": 42.484646741533,
+                    "loss_mw": 0.004263860450648811,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9873680493061279,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.802469556661785,
+                    "transformer_loading_max": 14.036742035752871,
+                    "loss_mw": 0.00044059868776910073,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.965753855632209,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 32.02570089938745,
+                    "transformer_loading_max": 37.6804624592931,
+                    "loss_mw": 0.0032349543072606353,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_renewable",
+            "metrics": {
+              "voltage_min": 0.9649650092637675,
+              "voltage_max": 1.0,
+              "line_loading_max": 32.55759580374431,
+              "transformer_loading_max": 38.30232675590537,
+              "estimated_24h_line_loss_mwh": 0.04083186256302766,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9829201864879165,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 15.673843129562586,
+                    "transformer_loading_max": 18.562862735285552,
+                    "loss_mw": 0.0007942034829248731,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9649650092637675,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 32.55759580374431,
+                    "transformer_loading_max": 38.30232675590537,
+                    "loss_mw": 0.0033744106734164333,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9889837306002172,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.319208478545622,
+                    "transformer_loading_max": 12.302643487747554,
+                    "loss_mw": 0.0003353153719881548,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9711679235770796,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 27.02893703059915,
+                    "transformer_loading_max": 31.838530444522892,
+                    "loss_mw": 0.0023013808988418157,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_transformer",
+            "metrics": {
+              "voltage_min": 0.9583486064989896,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.34675758569339,
+              "transformer_loading_max": 63.97955925474594,
+              "estimated_24h_line_loss_mwh": 0.050465503010845784,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9795775600919442,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.853978162263502,
+                    "transformer_loading_max": 31.548539998099727,
+                    "loss_mw": 0.0010096590962184633,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9583486064989896,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.34675758569339,
+                    "transformer_loading_max": 63.97955925474594,
+                    "loss_mw": 0.004171192849702918,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9883526908732703,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.991066275110036,
+                    "transformer_loading_max": 13.088117768278737,
+                    "loss_mw": 0.0003773433721010796,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9656156066613626,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 30.039325564086194,
+                    "transformer_loading_max": 52.918129598537554,
+                    "loss_mw": 0.0028527218504518365,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_line",
+            "metrics": {
+              "voltage_min": 0.9621355897104286,
+              "voltage_max": 1.0,
+              "line_loading_max": 50.84544878874334,
+              "transformer_loading_max": 39.86826742457141,
+              "estimated_24h_line_loss_mwh": 0.048960103042978986,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9804161285137122,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 26.252925625055884,
+                    "transformer_loading_max": 20.700172953267018,
+                    "loss_mw": 0.001054712808205782,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9621355897104286,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 50.84544878874334,
+                    "transformer_loading_max": 39.86826742457141,
+                    "loss_mw": 0.003950199727279771,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9879012321468545,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.20938616213517,
+                    "transformer_loading_max": 12.872065730886753,
+                    "loss_mw": 0.0004026393153252969,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9682451162239939,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 29.219320578699865,
+                    "transformer_loading_max": 34.39940723981578,
+                    "loss_mw": 0.002752465323018982,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_compound",
+            "metrics": {
+              "voltage_min": 0.9584197934103508,
+              "voltage_max": 1.0,
+              "line_loading_max": 48.380216235180725,
+              "transformer_loading_max": 61.13395940874168,
+              "estimated_24h_line_loss_mwh": 0.051614644883478826,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9820602962617064,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 16.918053783979193,
+                    "transformer_loading_max": 20.017504180532594,
+                    "loss_mw": 0.0008952524589707338,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9584197934103508,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 48.380216235180725,
+                    "transformer_loading_max": 61.13395940874168,
+                    "loss_mw": 0.004134494310659029,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "1"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9881692934800881,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.932438126276315,
+                    "transformer_loading_max": 13.019577518606114,
+                    "loss_mw": 0.0003832403449136367,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9634162144469428,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 42.18063530306592,
+                    "transformer_loading_max": 53.41856619018911,
+                    "loss_mw": 0.0031894536993697393,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "1"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_low",
+            "metrics": {
+              "voltage_min": 0.9658271319337678,
+              "voltage_max": 1.0,
+              "line_loading_max": 31.45095614729226,
+              "transformer_loading_max": 37.00850932695494,
+              "estimated_24h_line_loss_mwh": 0.039201215666101324,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9834349093766245,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 15.527981756876969,
+                    "transformer_loading_max": 18.392328127584715,
+                    "loss_mw": 0.0007596761892973954,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9658271319337678,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 31.45095614729226,
+                    "transformer_loading_max": 37.00850932695494,
+                    "loss_mw": 0.003187650205846583,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9890464096378696,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 10.168823320702193,
+                    "transformer_loading_max": 12.126828497984429,
+                    "loss_mw": 0.00032986231407201166,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.9713177298579878,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 26.69475194236817,
+                    "transformer_loading_max": 31.447821795703977,
+                    "loss_mw": 0.0022563472351342304,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_mixed",
+            "metrics": {
+              "voltage_min": 0.9607757754682927,
+              "voltage_max": 1.0,
+              "line_loading_max": 36.20969695402726,
+              "transformer_loading_max": 42.57216263556928,
+              "estimated_24h_line_loss_mwh": 0.05251316130646584,
+              "periods": [
+                {
+                  "period": 0,
+                  "metrics": {
+                    "voltage_min": 0.9811444480826759,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 17.383111202182754,
+                    "transformer_loading_max": 20.56122275933522,
+                    "loss_mw": 0.0009722896732283675,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 1,
+                  "metrics": {
+                    "voltage_min": 0.9607757754682927,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 36.20969695402726,
+                    "transformer_loading_max": 42.57216263556928,
+                    "loss_mw": 0.004211151703417761,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 2,
+                  "metrics": {
+                    "voltage_min": 0.9881845633727995,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 11.03827366849782,
+                    "transformer_loading_max": 13.14330922085189,
+                    "loss_mw": 0.00038346552776419296,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                },
+                {
+                  "period": 3,
+                  "metrics": {
+                    "voltage_min": 0.965715359597441,
+                    "voltage_max": 1.0,
+                    "line_loading_max": 31.196213181311762,
+                    "transformer_loading_max": 36.71068259709358,
+                    "loss_mw": 0.0031852866466673176,
+                    "worst_low_bus": "14",
+                    "worst_high_bus": "0",
+                    "worst_line": "0"
+                  },
+                  "checks": {
+                    "voltage_min": true,
+                    "voltage_max": true,
+                    "line_loading": true,
+                    "transformer_loading": true
+                  }
+                }
+              ]
+            },
+            "checks": {
+              "voltage_min": true,
+              "voltage_max": true,
+              "line_loading": true,
+              "transformer_loading": true
+            },
+            "passed": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "task": "Net1",
+    "producer": "gpt-5.4",
+    "repeat": 0,
+    "method": "tool_same",
+    "initial": {
+      "pipe_upgrades": [],
+      "pump_schedules": {
+        "9": [
+          1.0,
+          1.0,
+          1.0,
+          1.05
+        ]
+      },
+      "tank_control_shifts_m": {
+        "2": 0.5
+      }
+    },
+    "final": {
+      "pipe_upgrades": [
+        "10",
+        "11"
+      ],
+      "pump_schedules": {
+        "9": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "tank_control_shifts_m": {
+        "2": 1.5
+      }
+    },
+    "expected": {
+      "initial": {
+        "passed": false,
+        "contract_errors": [],
+        "tests": [
+          {
+            "scenario": "normal_day",
+            "metrics": {
+              "pressure_min": 68.59921264648438,
+              "pressure_max": 91.72367858886719,
+              "supply_fraction_min": 1.0000020288707718,
+              "tank_end_change_m": {
+                "2": 1.7208213806152344
+              },
+              "tank_lower_margin_m": 3.4085350036621094,
+              "tank_upper_margin_m": 2.5561256408691406,
+              "hydraulic_energy_kwh": 2598.129412109375,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.0,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 71.21723175048828,
+                  "pressure_max": 85.46471405029297
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 68.59921264648438,
+                  "pressure_max": 84.83209991455078
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.72378540039062,
+                  "pressure_max": 91.23777770996094
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.51937866210938,
+                  "pressure_max": 91.72367858886719
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "peak_day",
+            "metrics": {
+              "pressure_min": 65.8459701538086,
+              "pressure_max": 91.62195587158203,
+              "supply_fraction_min": 1.0000017883086958,
+              "tank_end_change_m": {
+                "2": 3.0513839721679688
+              },
+              "tank_lower_margin_m": 1.8071441650390625,
+              "tank_upper_margin_m": 2.571399688720703,
+              "hydraulic_energy_kwh": 2818.161611328125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 19.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 69.13726806640625,
+                  "pressure_max": 86.10852813720703
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 65.8459701538086,
+                  "pressure_max": 82.93709564208984
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 72.25435638427734,
+                  "pressure_max": 89.05813598632812
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.59332275390625,
+                  "pressure_max": 91.62195587158203
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "low_day",
+            "metrics": {
+              "pressure_min": 74.9515151977539,
+              "pressure_max": 91.67845916748047,
+              "supply_fraction_min": 1.0000028502304474,
+              "tank_end_change_m": {
+                "2": -1.6882896423339844
+              },
+              "tank_lower_margin_m": 3.3307151794433594,
+              "tank_upper_margin_m": 2.6434898376464844,
+              "hydraulic_energy_kwh": 2004.25950390625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 48.0,
+              "worst_high_hour": 38.0,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 74.9515151977539,
+                  "pressure_max": 87.95726776123047
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 77.07244873046875,
+                  "pressure_max": 90.45801544189453
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 79.59361267089844,
+                  "pressure_max": 91.67845916748047
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 75.01923370361328,
+                  "pressure_max": 88.13900756835938
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": false
+            },
+            "passed": false
+          },
+          {
+            "scenario": "emergency_day",
+            "metrics": {
+              "pressure_min": 68.65518951416016,
+              "pressure_max": 91.97923278808594,
+              "supply_fraction_min": 1.0000020288707718,
+              "tank_end_change_m": {
+                "2": 1.7038002014160156
+              },
+              "tank_lower_margin_m": 3.4738502502441406,
+              "tank_upper_margin_m": 2.5731468200683594,
+              "hydraulic_energy_kwh": 2619.04454296875,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 71.27812194824219,
+                  "pressure_max": 85.46471405029297
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 68.65518951416016,
+                  "pressure_max": 84.50335693359375
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.77472686767578,
+                  "pressure_max": 91.07341766357422
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.5846939086914,
+                  "pressure_max": 91.97923278808594
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "aged_peak",
+            "metrics": {
+              "pressure_min": 65.2867431640625,
+              "pressure_max": 91.84777069091797,
+              "supply_fraction_min": 1.0000018450450343,
+              "tank_end_change_m": {
+                "2": 2.9933433532714844
+              },
+              "tank_lower_margin_m": 2.0564117431640625,
+              "tank_upper_margin_m": 2.6000289916992188,
+              "hydraulic_energy_kwh": 2830.1461142578123,
+              "worst_low_node": "32",
+              "worst_high_node": "11",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 19.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 68.7320785522461,
+                  "pressure_max": 85.86009216308594
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 65.2867431640625,
+                  "pressure_max": 83.09721374511719
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 72.26551818847656,
+                  "pressure_max": 89.19144439697266
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.37541961669922,
+                  "pressure_max": 91.84777069091797
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "spatial_peak",
+            "metrics": {
+              "pressure_min": 67.439697265625,
+              "pressure_max": 91.754638671875,
+              "supply_fraction_min": 1.000001992940454,
+              "tank_end_change_m": {
+                "2": 1.9649200439453125
+              },
+              "tank_lower_margin_m": 3.0285797119140625,
+              "tank_upper_margin_m": 2.5996932983398438,
+              "hydraulic_energy_kwh": 2678.213703125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 70.3803939819336,
+                  "pressure_max": 85.30783081054688
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 67.439697265625,
+                  "pressure_max": 84.07096099853516
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 73.8194580078125,
+                  "pressure_max": 90.43404388427734
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.44122314453125,
+                  "pressure_max": 91.754638671875
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "aged_emergency",
+            "metrics": {
+              "pressure_min": 66.75837707519531,
+              "pressure_max": 91.87106323242188,
+              "supply_fraction_min": 1.0000017879989327,
+              "tank_end_change_m": {
+                "2": 2.2102088928222656
+              },
+              "tank_lower_margin_m": 2.745563507080078,
+              "tank_upper_margin_m": 2.6080093383789062,
+              "hydraulic_energy_kwh": 2668.9335224609376,
+              "worst_low_node": "32",
+              "worst_high_node": "11",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 69.98350524902344,
+                  "pressure_max": 85.33037567138672
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 66.75837707519531,
+                  "pressure_max": 84.35527801513672
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 73.63544464111328,
+                  "pressure_max": 90.83056640625
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.3481674194336,
+                  "pressure_max": 91.87106323242188
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "spatial_low",
+            "metrics": {
+              "pressure_min": 74.24005889892578,
+              "pressure_max": 91.5030288696289,
+              "supply_fraction_min": 1.000002994909453,
+              "tank_end_change_m": {
+                "2": -2.357532501220703
+              },
+              "tank_lower_margin_m": 3.4547653198242188,
+              "tank_upper_margin_m": 2.5556602478027344,
+              "hydraulic_energy_kwh": 1971.236611328125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 48.0,
+              "worst_high_hour": 37.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 74.24005889892578,
+                  "pressure_max": 88.02130126953125
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 77.4576187133789,
+                  "pressure_max": 90.58472442626953
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 79.41092681884766,
+                  "pressure_max": 91.5030288696289
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 75.11344146728516,
+                  "pressure_max": 87.43551635742188
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": false
+            },
+            "passed": false
+          },
+          {
+            "scenario": "held_normal",
+            "metrics": {
+              "pressure_min": 67.85658264160156,
+              "pressure_max": 91.95140075683594,
+              "supply_fraction_min": 1.0000019426778792,
+              "tank_end_change_m": {
+                "2": 1.8654670715332031
+              },
+              "tank_lower_margin_m": 3.134410858154297,
+              "tank_upper_margin_m": 2.6004180908203125,
+              "hydraulic_energy_kwh": 2678.81250390625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 70.69263458251953,
+                  "pressure_max": 85.35523223876953
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 67.85658264160156,
+                  "pressure_max": 84.27131652832031
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.10086822509766,
+                  "pressure_max": 90.63111114501953
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.49727630615234,
+                  "pressure_max": 91.95140075683594
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_peak",
+            "metrics": {
+              "pressure_min": 65.73738098144531,
+              "pressure_max": 91.88423156738281,
+              "supply_fraction_min": 1.0000017152295115,
+              "tank_end_change_m": {
+                "2": 3.3943939208984375
+              },
+              "tank_lower_margin_m": 1.5304183959960938,
+              "tank_upper_margin_m": 2.5824851989746094,
+              "hydraulic_energy_kwh": 2898.387376953125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 19.75,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 69.10880279541016,
+                  "pressure_max": 86.38754272460938
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 65.73738098144531,
+                  "pressure_max": 82.7131118774414
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 71.94994354248047,
+                  "pressure_max": 88.51005554199219
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.75831604003906,
+                  "pressure_max": 91.88423156738281
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_low",
+            "metrics": {
+              "pressure_min": 74.95027160644531,
+              "pressure_max": 91.68956756591797,
+              "supply_fraction_min": 1.0000028510282257,
+              "tank_end_change_m": {
+                "2": -1.27423095703125
+              },
+              "tank_lower_margin_m": 3.3236656188964844,
+              "tank_upper_margin_m": 2.6311721801757812,
+              "hydraulic_energy_kwh": 2037.319310546875,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 23.25,
+              "worst_high_hour": 38.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 75.26696014404297,
+                  "pressure_max": 87.85147094726562
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 76.40213775634766,
+                  "pressure_max": 90.24137878417969
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 79.86565399169922,
+                  "pressure_max": 91.68956756591797
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 74.95027160644531,
+                  "pressure_max": 88.61243438720703
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": false
+            },
+            "passed": false
+          },
+          {
+            "scenario": "held_emergency",
+            "metrics": {
+              "pressure_min": 68.01522827148438,
+              "pressure_max": 91.85967254638672,
+              "supply_fraction_min": 1.0000018928309882,
+              "tank_end_change_m": {
+                "2": 1.8420448303222656
+              },
+              "tank_lower_margin_m": 3.1583938598632812,
+              "tank_upper_margin_m": 2.598430633544922,
+              "hydraulic_energy_kwh": 2679.265080078125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 70.80708312988281,
+                  "pressure_max": 85.34944915771484
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 68.01522827148438,
+                  "pressure_max": 84.30799865722656
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.19751739501953,
+                  "pressure_max": 90.56366729736328
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.5035629272461,
+                  "pressure_max": 91.85967254638672
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_aged_peak",
+            "metrics": {
+              "pressure_min": 64.03424835205078,
+              "pressure_max": 92.0015640258789,
+              "supply_fraction_min": 1.0000017285529497,
+              "tank_end_change_m": {
+                "2": 3.502033233642578
+              },
+              "tank_lower_margin_m": 1.7183494567871094,
+              "tank_upper_margin_m": 2.619415283203125,
+              "hydraulic_energy_kwh": 2913.751513671875,
+              "worst_low_node": "32",
+              "worst_high_node": "11",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 19.75,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 67.84902954101562,
+                  "pressure_max": 86.15669250488281
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 64.03424835205078,
+                  "pressure_max": 82.7749252319336
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 71.42416381835938,
+                  "pressure_max": 88.37897491455078
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.30521392822266,
+                  "pressure_max": 92.0015640258789
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_aged_low",
+            "metrics": {
+              "pressure_min": 73.75337219238281,
+              "pressure_max": 91.88076782226562,
+              "supply_fraction_min": 1.0000026591625206,
+              "tank_end_change_m": {
+                "2": 0.28437042236328125
+              },
+              "tank_lower_margin_m": 3.402545928955078,
+              "tank_upper_margin_m": 2.551105499267578,
+              "hydraulic_energy_kwh": 2180.5520986328124,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 24.25,
+              "worst_high_hour": 40.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 73.75337219238281,
+                  "pressure_max": 87.03730773925781
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 74.21293640136719,
+                  "pressure_max": 89.16724395751953
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 80.27667999267578,
+                  "pressure_max": 91.88076782226562
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 75.42750549316406,
+                  "pressure_max": 90.22824096679688
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_aged_emergency",
+            "metrics": {
+              "pressure_min": 66.56925964355469,
+              "pressure_max": 91.93010711669922,
+              "supply_fraction_min": 1.000001944517836,
+              "tank_end_change_m": {
+                "2": 2.1946563720703125
+              },
+              "tank_lower_margin_m": 3.0101585388183594,
+              "tank_upper_margin_m": 2.5505638122558594,
+              "hydraulic_energy_kwh": 2710.43812109375,
+              "worst_low_node": "32",
+              "worst_high_node": "11",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 69.7341537475586,
+                  "pressure_max": 85.15974426269531
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 66.56925964355469,
+                  "pressure_max": 83.91578674316406
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 73.54635620117188,
+                  "pressure_max": 90.27127075195312
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.94416046142578,
+                  "pressure_max": 91.93010711669922
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_spatial",
+            "metrics": {
+              "pressure_min": 68.4122314453125,
+              "pressure_max": 91.9421615600586,
+              "supply_fraction_min": 1.0000020311567346,
+              "tank_end_change_m": {
+                "2": 1.8658370971679688
+              },
+              "tank_lower_margin_m": 3.135456085205078,
+              "tank_upper_margin_m": 2.600719451904297,
+              "hydraulic_energy_kwh": 2678.915130859375,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 71.13291931152344,
+                  "pressure_max": 85.31629943847656
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 68.4122314453125,
+                  "pressure_max": 84.22393798828125
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.3472900390625,
+                  "pressure_max": 90.61041259765625
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.65144348144531,
+                  "pressure_max": 91.9421615600586
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          }
+        ]
+      },
+      "final": {
+        "passed": true,
+        "contract_errors": [],
+        "tests": [
+          {
+            "scenario": "normal_day",
+            "metrics": {
+              "pressure_min": 70.72341918945312,
+              "pressure_max": 92.51242065429688,
+              "supply_fraction_min": 1.0000021026795907,
+              "tank_end_change_m": {
+                "2": 1.307861328125
+              },
+              "tank_lower_margin_m": 4.559589385986328,
+              "tank_upper_margin_m": 1.5546989440917969,
+              "hydraulic_energy_kwh": 2338.7729931640624,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 41.75,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 72.74221801757812,
+                  "pressure_max": 85.55110931396484
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 70.72341918945312,
+                  "pressure_max": 86.36904907226562
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 77.30896759033203,
+                  "pressure_max": 92.51242065429688
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.10621643066406,
+                  "pressure_max": 92.35952758789062
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "peak_day",
+            "metrics": {
+              "pressure_min": 67.8692855834961,
+              "pressure_max": 92.54190063476562,
+              "supply_fraction_min": 1.0000018566501947,
+              "tank_end_change_m": {
+                "2": 1.9643821716308594
+              },
+              "tank_lower_margin_m": 4.579067230224609,
+              "tank_upper_margin_m": 1.5606880187988281,
+              "hydraulic_energy_kwh": 2461.867830078125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 43.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 70.82551574707031,
+                  "pressure_max": 85.2051010131836
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 67.8692855834961,
+                  "pressure_max": 84.21827697753906
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.71817016601562,
+                  "pressure_max": 91.8224105834961
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.83023834228516,
+                  "pressure_max": 92.54190063476562
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "low_day",
+            "metrics": {
+              "pressure_min": 73.32426452636719,
+              "pressure_max": 92.58433532714844,
+              "supply_fraction_min": 1.000002660977066,
+              "tank_end_change_m": {
+                "2": 1.9926567077636719
+              },
+              "tank_lower_margin_m": 4.639621734619141,
+              "tank_upper_margin_m": 1.5869560241699219,
+              "hydraulic_energy_kwh": 1885.20240625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 32.5,
+              "worst_high_hour": 40.75,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 77.18866729736328,
+                  "pressure_max": 91.51195526123047
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 73.32426452636719,
+                  "pressure_max": 91.58889770507812
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 78.31037902832031,
+                  "pressure_max": 92.58433532714844
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.87039184570312,
+                  "pressure_max": 91.83837127685547
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "emergency_day",
+            "metrics": {
+              "pressure_min": 70.6659164428711,
+              "pressure_max": 92.46802520751953,
+              "supply_fraction_min": 1.0000021026795907,
+              "tank_end_change_m": {
+                "2": 1.3421478271484375
+              },
+              "tank_lower_margin_m": 4.656459808349609,
+              "tank_upper_margin_m": 1.5993499755859375,
+              "hydraulic_energy_kwh": 2320.90966796875,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 41.75,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 72.67898559570312,
+                  "pressure_max": 85.55110931396484
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 70.6659164428711,
+                  "pressure_max": 86.02854919433594
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 77.25738525390625,
+                  "pressure_max": 92.46802520751953
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.23638153076172,
+                  "pressure_max": 92.3938217163086
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "aged_peak",
+            "metrics": {
+              "pressure_min": 67.29642486572266,
+              "pressure_max": 92.49366760253906,
+              "supply_fraction_min": 1.0000018450450343,
+              "tank_end_change_m": {
+                "2": 1.8671607971191406
+              },
+              "tank_lower_margin_m": 4.579402923583984,
+              "tank_upper_margin_m": 1.584075927734375,
+              "hydraulic_energy_kwh": 2451.6588603515625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.75,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 70.30785369873047,
+                  "pressure_max": 84.93276977539062
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 67.29642486572266,
+                  "pressure_max": 84.40105438232422
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.78772735595703,
+                  "pressure_max": 92.238037109375
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.42122650146484,
+                  "pressure_max": 92.49366760253906
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "spatial_peak",
+            "metrics": {
+              "pressure_min": 69.33135986328125,
+              "pressure_max": 92.7017822265625,
+              "supply_fraction_min": 1.0000020675433838,
+              "tank_end_change_m": {
+                "2": 1.6088294982910156
+              },
+              "tank_lower_margin_m": 4.596164703369141,
+              "tank_upper_margin_m": 1.6339492797851562,
+              "hydraulic_energy_kwh": 2385.3296767578126,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 71.76915740966797,
+                  "pressure_max": 85.23245239257812
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 69.33135986328125,
+                  "pressure_max": 85.58904266357422
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 76.20213317871094,
+                  "pressure_max": 92.27395629882812
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.28459930419922,
+                  "pressure_max": 92.7017822265625
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "aged_emergency",
+            "metrics": {
+              "pressure_min": 69.26488494873047,
+              "pressure_max": 92.5130615234375,
+              "supply_fraction_min": 1.0000019218166212,
+              "tank_end_change_m": {
+                "2": 1.5019912719726562
+              },
+              "tank_lower_margin_m": 4.582660675048828,
+              "tank_upper_margin_m": 1.6001472473144531,
+              "hydraulic_energy_kwh": 2323.5403076171874,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.0,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 71.8656005859375,
+                  "pressure_max": 85.26054382324219
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 69.26488494873047,
+                  "pressure_max": 86.04484558105469
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 76.62815856933594,
+                  "pressure_max": 92.31080627441406
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.8486099243164,
+                  "pressure_max": 92.5130615234375
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "spatial_low",
+            "metrics": {
+              "pressure_min": 72.59608459472656,
+              "pressure_max": 92.5209732055664,
+              "supply_fraction_min": 1.0000027090023456,
+              "tank_end_change_m": {
+                "2": 1.8715476989746094
+              },
+              "tank_lower_margin_m": 4.580371856689453,
+              "tank_upper_margin_m": 1.6200332641601562,
+              "hydraulic_energy_kwh": 1866.9921328125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 40.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 77.14566802978516,
+                  "pressure_max": 91.53360748291016
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 72.59608459472656,
+                  "pressure_max": 91.52107238769531
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 78.09967803955078,
+                  "pressure_max": 92.5209732055664
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.865234375,
+                  "pressure_max": 91.68262481689453
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_normal",
+            "metrics": {
+              "pressure_min": 69.81746673583984,
+              "pressure_max": 92.57220458984375,
+              "supply_fraction_min": 1.0000020136180245,
+              "tank_end_change_m": {
+                "2": 1.5635147094726562
+              },
+              "tank_lower_margin_m": 4.638206481933594,
+              "tank_upper_margin_m": 1.5719985961914062,
+              "hydraulic_energy_kwh": 2369.249150390625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 72.1212158203125,
+                  "pressure_max": 85.33200073242188
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 69.81746673583984,
+                  "pressure_max": 85.79528045654297
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 76.52295684814453,
+                  "pressure_max": 92.466796875
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.28378295898438,
+                  "pressure_max": 92.57220458984375
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_peak",
+            "metrics": {
+              "pressure_min": 67.66287994384766,
+              "pressure_max": 92.7685317993164,
+              "supply_fraction_min": 1.000001782816215,
+              "tank_end_change_m": {
+                "2": 2.1061744689941406
+              },
+              "tank_lower_margin_m": 4.541263580322266,
+              "tank_upper_margin_m": 1.5848922729492188,
+              "hydraulic_energy_kwh": 2527.4472255859373,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 70.69441986083984,
+                  "pressure_max": 85.29185485839844
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 67.66287994384766,
+                  "pressure_max": 83.90118408203125
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 74.31028747558594,
+                  "pressure_max": 91.26325225830078
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.992431640625,
+                  "pressure_max": 92.7685317993164
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_low",
+            "metrics": {
+              "pressure_min": 73.44383239746094,
+              "pressure_max": 92.48101043701172,
+              "supply_fraction_min": 1.0000028510282257,
+              "tank_end_change_m": {
+                "2": 2.414287567138672
+              },
+              "tank_lower_margin_m": 4.6084442138671875,
+              "tank_upper_margin_m": 1.5596084594726562,
+              "hydraulic_energy_kwh": 1904.737408203125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 33.75,
+              "worst_high_hour": 41.5,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 77.09178924560547,
+                  "pressure_max": 91.02923583984375
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 73.44383239746094,
+                  "pressure_max": 91.56004333496094
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 77.3855209350586,
+                  "pressure_max": 92.48101043701172
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.777099609375,
+                  "pressure_max": 92.3195571899414
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_emergency",
+            "metrics": {
+              "pressure_min": 70.05117797851562,
+              "pressure_max": 92.61607360839844,
+              "supply_fraction_min": 1.0000019651925753,
+              "tank_end_change_m": {
+                "2": 1.5306777954101562
+              },
+              "tank_lower_margin_m": 4.64715576171875,
+              "tank_upper_margin_m": 1.5568008422851562,
+              "hydraulic_energy_kwh": 2370.4939619140623,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.0,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 72.30802917480469,
+                  "pressure_max": 85.3268051147461
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 70.05117797851562,
+                  "pressure_max": 85.8339614868164
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 76.69449615478516,
+                  "pressure_max": 92.39435577392578
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.17076873779297,
+                  "pressure_max": 92.61607360839844
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_aged_peak",
+            "metrics": {
+              "pressure_min": 65.84959411621094,
+              "pressure_max": 92.67484283447266,
+              "supply_fraction_min": 1.0000017973845876,
+              "tank_end_change_m": {
+                "2": 2.0508689880371094
+              },
+              "tank_lower_margin_m": 4.644794464111328,
+              "tank_upper_margin_m": 1.6329460144042969,
+              "hydraulic_energy_kwh": 2500.3862666015625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 18.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 69.26509094238281,
+                  "pressure_max": 84.92436218261719
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 65.84959411621094,
+                  "pressure_max": 84.03958892822266
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 73.78141021728516,
+                  "pressure_max": 91.50564575195312
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.35994720458984,
+                  "pressure_max": 92.67484283447266
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_aged_low",
+            "metrics": {
+              "pressure_min": 76.30905151367188,
+              "pressure_max": 91.8040542602539,
+              "supply_fraction_min": 1.0000027497247448,
+              "tank_end_change_m": {
+                "2": 7.15557861328125
+              },
+              "tank_lower_margin_m": 4.566715240478516,
+              "tank_upper_margin_m": 1.582122802734375,
+              "hydraulic_energy_kwh": 2149.5344736328125,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 22.0,
+              "worst_high_hour": 12.0,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 76.75283813476562,
+                  "pressure_max": 91.40074920654297
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 77.45021057128906,
+                  "pressure_max": 91.22261047363281
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 77.01656341552734,
+                  "pressure_max": 91.8040542602539
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.30905151367188,
+                  "pressure_max": 91.57537078857422
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_aged_emergency",
+            "metrics": {
+              "pressure_min": 68.66448974609375,
+              "pressure_max": 92.64643859863281,
+              "supply_fraction_min": 1.0000020172358843,
+              "tank_end_change_m": {
+                "2": 1.5425453186035156
+              },
+              "tank_lower_margin_m": 4.577617645263672,
+              "tank_upper_margin_m": 1.6029396057128906,
+              "hydraulic_energy_kwh": 2357.7731611328127,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.0,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 71.2326889038086,
+                  "pressure_max": 84.97181701660156
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 68.66448974609375,
+                  "pressure_max": 85.51081848144531
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 76.1867904663086,
+                  "pressure_max": 92.17457580566406
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 76.54278564453125,
+                  "pressure_max": 92.64643859863281
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          },
+          {
+            "scenario": "held_spatial",
+            "metrics": {
+              "pressure_min": 70.36852264404297,
+              "pressure_max": 92.56610870361328,
+              "supply_fraction_min": 1.0000021060652289,
+              "tank_end_change_m": {
+                "2": 1.5628433227539062
+              },
+              "tank_lower_margin_m": 4.639064788818359,
+              "tank_upper_margin_m": 1.5735435485839844,
+              "hydraulic_energy_kwh": 2369.314744140625,
+              "worst_low_node": "32",
+              "worst_high_node": "23",
+              "warnings": [],
+              "worst_low_hour": 31.75,
+              "worst_high_hour": 42.25,
+              "periods": [
+                {
+                  "period": 0,
+                  "pressure_min": 72.55062103271484,
+                  "pressure_max": 85.29964447021484
+                },
+                {
+                  "period": 1,
+                  "pressure_min": 70.36852264404297,
+                  "pressure_max": 85.7647705078125
+                },
+                {
+                  "period": 2,
+                  "pressure_min": 76.75447082519531,
+                  "pressure_max": 92.45692443847656
+                },
+                {
+                  "period": 3,
+                  "pressure_min": 77.43443298339844,
+                  "pressure_max": 92.56610870361328
+                }
+              ]
+            },
+            "checks": {
+              "pressure_min": true,
+              "pressure_max": true,
+              "supply": true,
+              "tank_reserve": true,
+              "terminal_storage": true
+            },
+            "passed": true
+          }
+        ]
+      }
+    }
+  }
+]

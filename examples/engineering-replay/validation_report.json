@@ -1,0 +1,78 @@
+{
+  "verified_on": "2026-10-15",
+  "mode": "Original environment replay, archive relocation replay, and fresh venv installation/replay on the same Windows machine and base Python.",
+  "model_calls": 0,
+  "default_replay": {
+    "scenario_evaluations": 64,
+    "all_expected_match": true,
+    "seconds": 6.296315900000991,
+    "outcomes": [
+      {
+        "case": "kerber_overhead",
+        "stage": "initial",
+        "passed": true,
+        "expected_match": true
+      },
+      {
+        "case": "kerber_overhead",
+        "stage": "final",
+        "passed": true,
+        "expected_match": true
+      },
+      {
+        "case": "Net1",
+        "stage": "initial",
+        "passed": false,
+        "expected_match": true
+      },
+      {
+        "case": "Net1",
+        "stage": "final",
+        "passed": true,
+        "expected_match": true
+      }
+    ]
+  },
+  "relocated_archive_replay": {
+    "scenario_evaluations": 64,
+    "all_expected_match": true,
+    "scores_exactly_equal_to_first_run": true,
+    "seconds": 6.31200920000083,
+    "archive_sha256": "7b45cfff74c7648818760894d6bbe980a127921da911952a9cd7ebde9056cc51"
+  },
+  "custom_design_cli": {
+    "case": "Net1",
+    "scenario_evaluations": 16,
+    "passed": true,
+    "expected_match": null
+  },
+  "comparison_tolerances": {
+    "absolute": 1e-06,
+    "relative": 1e-08
+  },
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "not_verified": [
+    "different machine or base Python runtime",
+    "cross operating-system portability",
+    "independent physical model validation",
+    "field safety",
+    "model generation/review reproducibility",
+    "new-network generalization"
+  ],
+  "fresh_venv_replay": {
+    "include_system_site_packages": false,
+    "dependency_installation": "pip install -r requirements.txt succeeded; public package wheels reused from pip cache",
+    "pip_check": "No broken requirements found.",
+    "scenario_evaluations": 64,
+    "all_expected_match": true,
+    "scores_exactly_equal_to_first_run": true,
+    "seconds": 4.510463200000231,
+    "core_imports_from_clean_venv": {
+      "numpy": true,
+      "pandapower": true,
+      "wntr": true
+    },
+    "dependency_lock": "requirements-lock-windows-py312.txt"
+  }
+}

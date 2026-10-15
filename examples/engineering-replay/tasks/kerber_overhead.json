@@ -1,0 +1,605 @@
+{
+  "id": "kerber_overhead",
+  "domain": "power",
+  "input_file": "kerber_overhead_prepared.json",
+  "network_root": "kerber_overhead",
+  "source": "https://pandapower.readthedocs.io/en/stable/networks.html",
+  "source_sha256": "05dae0616d09685e8fc3aadd8ed47b3dcdabfda5ba28fbc3ffc1390911f454bf",
+  "source_family": "kerber",
+  "seen_root": false,
+  "objects": {
+    "buses": 15,
+    "lines": 13,
+    "transformers": 1
+  },
+  "demand_growth": 1.3,
+  "profile": [
+    [
+      0.7,
+      0.15
+    ],
+    [
+      1.4,
+      0.1
+    ],
+    [
+      0.45,
+      2.5
+    ],
+    [
+      1.2,
+      0.0
+    ]
+  ],
+  "periods": [
+    "00-06",
+    "06-12",
+    "12-18",
+    "18-24"
+  ],
+  "line_circuits": 3,
+  "transformer_choices": [
+    1,
+    2,
+    3
+  ],
+  "tap_choices": [
+    0
+  ],
+  "max_tap_movement": 18,
+  "limits": {
+    "voltage_min": 0.95,
+    "voltage_max": 1.05
+  },
+  "max_upgrades": 9,
+  "eligible_assets": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "dev": [
+    {
+      "id": "normal_day"
+    },
+    {
+      "id": "peak_day",
+      "load_scale": 1.04
+    },
+    {
+      "id": "renewable_day",
+      "load_scale": 0.95,
+      "generation_scale": 1.05
+    },
+    {
+      "id": "spatial_day",
+      "spatial_spread": 0.08,
+      "spatial_seed": 1601
+    },
+    {
+      "id": "transformer_outage",
+      "transformer_outage": true,
+      "outage_periods": [
+        1,
+        3
+      ],
+      "transformer_bank": "0"
+    },
+    {
+      "id": "line_outage",
+      "line_circuit_outage": "0",
+      "outage_periods": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "compound_outage",
+      "line_circuit_outage": "1",
+      "transformer_outage": true,
+      "outage_periods": [
+        1
+      ],
+      "spatial_spread": 0.06,
+      "spatial_seed": 1602,
+      "transformer_bank": "0"
+    },
+    {
+      "id": "light_load_day",
+      "load_scale": 0.9,
+      "generation_scale": 1.04
+    }
+  ],
+  "held": [
+    {
+      "id": "held_normal",
+      "load_scale": 1.02,
+      "generation_scale": 0.96,
+      "spatial_spread": 0.06,
+      "spatial_seed": 8601
+    },
+    {
+      "id": "held_peak",
+      "load_scale": 1.06,
+      "generation_scale": 0.9,
+      "spatial_spread": 0.08,
+      "spatial_seed": 8602
+    },
+    {
+      "id": "held_renewable",
+      "load_scale": 0.93,
+      "generation_scale": 1.07,
+      "spatial_spread": 0.06,
+      "spatial_seed": 8603
+    },
+    {
+      "id": "held_transformer",
+      "transformer_outage": true,
+      "outage_periods": [
+        0,
+        1,
+        3
+      ],
+      "load_scale": 1.025,
+      "spatial_spread": 0.08,
+      "spatial_seed": 8604,
+      "transformer_bank": "0"
+    },
+    {
+      "id": "held_line",
+      "line_circuit_outage": "0",
+      "outage_periods": [
+        0,
+        1,
+        2
+      ],
+      "spatial_spread": 0.09,
+      "spatial_seed": 8605
+    },
+    {
+      "id": "held_compound",
+      "line_circuit_outage": "1",
+      "transformer_outage": true,
+      "outage_periods": [
+        1,
+        3
+      ],
+      "load_scale": 1.01,
+      "spatial_spread": 0.08,
+      "spatial_seed": 8606,
+      "transformer_bank": "0"
+    },
+    {
+      "id": "held_low",
+      "load_scale": 0.92,
+      "generation_scale": 1.02,
+      "spatial_spread": 0.08,
+      "spatial_seed": 8607
+    },
+    {
+      "id": "held_mixed",
+      "load_scale": 1.03,
+      "generation_scale": 1.03,
+      "spatial_spread": 0.1,
+      "spatial_seed": 8608
+    }
+  ],
+  "transformer_banks": [
+    "0"
+  ],
+  "context": {
+    "network_tables": {
+      "bus": {
+        "columns": [
+          "id",
+          "vn_kv"
+        ],
+        "rows": [
+          [
+            "0",
+            10.0
+          ],
+          [
+            "1",
+            0.4
+          ],
+          [
+            "2",
+            0.4
+          ],
+          [
+            "3",
+            0.4
+          ],
+          [
+            "4",
+            0.4
+          ],
+          [
+            "5",
+            0.4
+          ],
+          [
+            "6",
+            0.4
+          ],
+          [
+            "7",
+            0.4
+          ],
+          [
+            "8",
+            0.4
+          ],
+          [
+            "9",
+            0.4
+          ],
+          [
+            "10",
+            0.4
+          ],
+          [
+            "11",
+            0.4
+          ],
+          [
+            "12",
+            0.4
+          ],
+          [
+            "13",
+            0.4
+          ],
+          [
+            "14",
+            0.4
+          ]
+        ]
+      },
+      "line": {
+        "columns": [
+          "id",
+          "from_bus",
+          "to_bus",
+          "length_km",
+          "r_ohm_per_km",
+          "x_ohm_per_km",
+          "c_nf_per_km",
+          "max_i_ka",
+          "in_service"
+        ],
+        "rows": [
+          [
+            "0",
+            1,
+            2,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "1",
+            2,
+            3,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "2",
+            3,
+            4,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "3",
+            4,
+            5,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "4",
+            5,
+            6,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "5",
+            6,
+            7,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "6",
+            7,
+            8,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "7",
+            8,
+            9,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "8",
+            9,
+            10,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "9",
+            10,
+            11,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "10",
+            11,
+            12,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "11",
+            12,
+            13,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ],
+          [
+            "12",
+            13,
+            14,
+            0.021,
+            0.443,
+            0.069,
+            0.0,
+            0.27,
+            true
+          ]
+        ]
+      },
+      "load": {
+        "columns": [
+          "id",
+          "bus",
+          "p_mw",
+          "q_mvar"
+        ],
+        "rows": [
+          [
+            "0",
+            2.0,
+            0.008,
+            0.0
+          ],
+          [
+            "1",
+            3.0,
+            0.008,
+            0.0
+          ],
+          [
+            "2",
+            4.0,
+            0.008,
+            0.0
+          ],
+          [
+            "3",
+            5.0,
+            0.008,
+            0.0
+          ],
+          [
+            "4",
+            6.0,
+            0.008,
+            0.0
+          ],
+          [
+            "5",
+            7.0,
+            0.008,
+            0.0
+          ],
+          [
+            "6",
+            8.0,
+            0.008,
+            0.0
+          ],
+          [
+            "7",
+            9.0,
+            0.008,
+            0.0
+          ],
+          [
+            "8",
+            10.0,
+            0.008,
+            0.0
+          ],
+          [
+            "9",
+            11.0,
+            0.008,
+            0.0
+          ],
+          [
+            "10",
+            12.0,
+            0.008,
+            0.0
+          ],
+          [
+            "11",
+            13.0,
+            0.008,
+            0.0
+          ],
+          [
+            "12",
+            14.0,
+            0.008,
+            0.0
+          ]
+        ]
+      },
+      "renewable": {
+        "columns": [
+          "id",
+          "bus",
+          "p_mw",
+          "q_mvar"
+        ],
+        "rows": []
+      },
+      "transformer": {
+        "columns": [
+          "id",
+          "hv_bus",
+          "lv_bus",
+          "sn_mva",
+          "vn_hv_kv",
+          "vn_lv_kv",
+          "vk_percent",
+          "vkr_percent",
+          "tap_step_percent",
+          "tap_neutral"
+        ],
+        "rows": [
+          [
+            "0",
+            0.0,
+            1.0,
+            0.16,
+            10.0,
+            0.4,
+            4.0,
+            1.2,
+            null,
+            null
+          ]
+        ]
+      },
+      "source": {
+        "columns": [
+          "id",
+          "bus",
+          "vm_pu"
+        ],
+        "rows": [
+          [
+            "0",
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "fixed_generation": {
+        "columns": [
+          "id",
+          "bus",
+          "p_mw",
+          "vm_pu"
+        ],
+        "rows": []
+      },
+      "switch": {
+        "columns": [
+          "id",
+          "bus",
+          "element",
+          "et",
+          "closed"
+        ],
+        "rows": []
+      }
+    },
+    "ranking_by_baseline_line_loading": {
+      "0": 109.50342038916665,
+      "1": 101.48795222046756,
+      "2": 93.38015083096865,
+      "3": 85.18551711876204,
+      "4": 76.91005361081429,
+      "5": 68.5602483174764,
+      "6": 60.143051822492666,
+      "7": 51.66584754816007,
+      "8": 43.13641530682206,
+      "9": 34.56288843197227,
+      "10": 25.953704967767443,
+      "11": 17.317553576850823,
+      "12": 8.66331499405156
+    },
+    "nonconvergent_baseline_periods": []
+  },
+  "contract": "Design capital upgrades plus a four-period repeating tap schedule. Preserve source network, loads, ratings, source voltages and fixed conventional generators. Demand growth 1.30 multiplies original P and Q; profile generation multipliers apply only to sgen. Approved corridor upgrades install THREE total identical parallel circuits; transformer_parallel means identical parallel units in each original bank. All original banks receive the same approved tap in each six-hour period; positive HV-side ratio tap lowers LV voltage. Tap choices are the common original device catalogue; networks without tap changers allow only zero. Daily cyclic sum of absolute tap changes must be <=18, a declared experimental operating limit. Each scenario is four quasi-static AC power flows; no electromagnetic transient or storage dynamics are modelled. Outage removes one installed circuit or transformer only during its declared periods. Unserved buses, nonconvergence, voltage outside 0.95-1.05 pu or line/transformer loading over 100% fail. No load shedding, renewable curtailment or artificial rating/source changes. This is a finite experimental contract, not full N-1 or field certification. A transformer outage removes ONE unit from the declared transformer_bank only, not one unit from every bank.",
+  "difficulty_stratum": "coupled_design"
+}

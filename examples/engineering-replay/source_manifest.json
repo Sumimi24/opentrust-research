@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "source_study": "engineering_design_v04_20261014",
+      "source_path": "engineering.py",
+      "bundle_path": "engineering.py",
+      "sha256": "b92970b7617f778f42b93cce16c81f90b3c6e9fec6876f33b44202895fb86a2d"
+    },
+    {
+      "source_study": "engineering_design_v04_20261014",
+      "source_path": "tasks/kerber_overhead/task.json",
+      "bundle_path": "tasks/kerber_overhead.json",
+      "sha256": "ecc71a38e1737f299fda6237f58eacd85454d3922e00e9dd2211d83820ab50d3"
+    },
+    {
+      "source_study": "engineering_design_v04_20261014",
+      "source_path": "inputs/kerber_overhead_prepared.json",
+      "bundle_path": "inputs/kerber_overhead_prepared.json",
+      "sha256": "05dae0616d09685e8fc3aadd8ed47b3dcdabfda5ba28fbc3ffc1390911f454bf"
+    },
+    {
+      "source_study": "engineering_design_v04_20261014",
+      "source_path": "tasks/Net1/task.json",
+      "bundle_path": "tasks/Net1.json",
+      "sha256": "b1238c5faf8c65d08e41306a41598fee2919708e4d84355807d5d024f05a6ae7"
+    },
+    {
+      "source_study": "engineering_design_v04_20261014",
+      "source_path": "inputs/Net1.inp",
+      "bundle_path": "inputs/Net1.inp",
+      "sha256": "607510a01287d60d27b280a39df31a001363175a438a5de1b39e749cec6ddbc8"
+    },
+    {
+      "source_study": "engineering_design_v04_20261014",
+      "source_path": "final_results.json",
+      "source_sha256": "d57a7ad92fd725ac93d3684136d389ea71ea197577a7d3222bb272c4e3b582c5",
+      "bundle_path": "cases.json",
+      "sha256": "5c8869c4c17958d4c28d3fb1a6b74bdf072bf2dac32a6a684b63170a5dbd91ce",
+      "transformation": "Allowlisted two task/producer/repeat/method rows; retained design and scoring objects only; no prompts, API addresses or model free text."
+    }
+  ],
+  "selection": "Two small CPU examples: one pandapower Kerber network and one WNTR Net1 network. Convenience sample, not representative evaluation."
+}

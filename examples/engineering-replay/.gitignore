@@ -1,0 +1,4 @@
+__pycache__/
+results.json
+candidate_results.json
+validation/

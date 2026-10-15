@@ -1,0 +1,7 @@
+numpy==2.4.6
+pandapower==3.5.6
+wntr==1.5.0
+scipy==1.18.1
+networkx==3.7
+pandas==2.3.3
+matplotlib==3.11.2

@@ -1,0 +1,427 @@
+{
+  "id": "Net1",
+  "domain": "water",
+  "input_file": "Net1.inp",
+  "network_root": "Net1",
+  "source": "https://usepa.github.io/WNTR/libraries.html",
+  "source_sha256": "607510a01287d60d27b280a39df31a001363175a438a5de1b39e749cec6ddbc8",
+  "source_family": "WNTR",
+  "seen_root": false,
+  "objects": {
+    "junctions": 9,
+    "pipes": 12,
+    "tanks": 1,
+    "pumps": 1
+  },
+  "demand_growth": 1.25,
+  "decision_pumps": [
+    "9"
+  ],
+  "speed_choices": [
+    0.95,
+    1.0,
+    1.05,
+    1.1
+  ],
+  "control_shift_choices": {
+    "2": [
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ]
+  },
+  "max_upgrades": 12,
+  "fire_node": "22",
+  "limits": {
+    "pressure_min": 25.0,
+    "pressure_max": 120.0,
+    "tank_drawdown_max": 1.0
+  },
+  "periods": [
+    "00-06",
+    "06-12",
+    "12-18",
+    "18-24"
+  ],
+  "eligible_assets": [
+    "111",
+    "10",
+    "122",
+    "11",
+    "121",
+    "112",
+    "12",
+    "21",
+    "113",
+    "31",
+    "22",
+    "110"
+  ],
+  "dev": [
+    {
+      "id": "normal_day"
+    },
+    {
+      "id": "peak_day",
+      "demand": 1.08
+    },
+    {
+      "id": "low_day",
+      "demand": 0.78
+    },
+    {
+      "id": "emergency_day",
+      "fire_flow": 0.0026024706015,
+      "fire_start": 8,
+      "fire_end": 12
+    },
+    {
+      "id": "aged_peak",
+      "demand": 1.06,
+      "roughness_factor": 0.94
+    },
+    {
+      "id": "spatial_peak",
+      "demand": 1.04,
+      "spatial_spread": 0.06,
+      "spatial_seed": 1701
+    },
+    {
+      "id": "aged_emergency",
+      "fire_flow": 0.0026024706015,
+      "fire_start": 30,
+      "fire_end": 34,
+      "roughness_factor": 0.94
+    },
+    {
+      "id": "spatial_low",
+      "demand": 0.8,
+      "spatial_spread": 0.06,
+      "spatial_seed": 1702
+    }
+  ],
+  "held": [
+    {
+      "id": "held_normal",
+      "demand": 1.02,
+      "spatial_spread": 0.04,
+      "spatial_seed": 8701
+    },
+    {
+      "id": "held_peak",
+      "demand": 1.09,
+      "spatial_spread": 0.05,
+      "spatial_seed": 8702
+    },
+    {
+      "id": "held_low",
+      "demand": 0.79,
+      "spatial_spread": 0.05,
+      "spatial_seed": 8703
+    },
+    {
+      "id": "held_emergency",
+      "demand": 1.02,
+      "fire_flow": 0.0026024706015,
+      "fire_start": 17,
+      "fire_end": 21
+    },
+    {
+      "id": "held_aged_peak",
+      "demand": 1.07,
+      "roughness_factor": 0.92,
+      "spatial_spread": 0.04,
+      "spatial_seed": 8704
+    },
+    {
+      "id": "held_aged_low",
+      "demand": 0.8,
+      "roughness_factor": 0.92,
+      "spatial_spread": 0.05,
+      "spatial_seed": 8705
+    },
+    {
+      "id": "held_aged_emergency",
+      "demand": 1.015,
+      "roughness_factor": 0.92,
+      "fire_flow": 0.0026024706015,
+      "fire_start": 21,
+      "fire_end": 25
+    },
+    {
+      "id": "held_spatial",
+      "demand": 1.035,
+      "spatial_spread": 0.08,
+      "spatial_seed": 8706
+    }
+  ],
+  "context": {
+    "junctions": [
+      {
+        "id": "10",
+        "elevation_m": 216.40800000000002,
+        "demands": [
+          {
+            "base_m3_s": 0.0,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "elevation_m": 216.40800000000002,
+        "demands": [
+          {
+            "base_m3_s": 0.00946352946,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "elevation_m": 213.36,
+        "demands": [
+          {
+            "base_m3_s": 0.00946352946,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "elevation_m": 211.836,
+        "demands": [
+          {
+            "base_m3_s": 0.00630901964,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "elevation_m": 213.36,
+        "demands": [
+          {
+            "base_m3_s": 0.00946352946,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "elevation_m": 211.836,
+        "demands": [
+          {
+            "base_m3_s": 0.01261803928,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "elevation_m": 210.312,
+        "demands": [
+          {
+            "base_m3_s": 0.00946352946,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "elevation_m": 213.36,
+        "demands": [
+          {
+            "base_m3_s": 0.00630901964,
+            "pattern": "1"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "elevation_m": 216.40800000000002,
+        "demands": [
+          {
+            "base_m3_s": 0.00630901964,
+            "pattern": "1"
+          }
+        ]
+      }
+    ],
+    "pipes": [
+      {
+        "id": "10",
+        "start": "10",
+        "end": "11",
+        "length_m": 3209.5440000000003,
+        "diameter_m": 0.4572,
+        "roughness": 100.0
+      },
+      {
+        "id": "11",
+        "start": "11",
+        "end": "12",
+        "length_m": 1609.344,
+        "diameter_m": 0.35559999999999997,
+        "roughness": 100.0
+      },
+      {
+        "id": "12",
+        "start": "12",
+        "end": "13",
+        "length_m": 1609.344,
+        "diameter_m": 0.254,
+        "roughness": 100.0
+      },
+      {
+        "id": "21",
+        "start": "21",
+        "end": "22",
+        "length_m": 1609.344,
+        "diameter_m": 0.254,
+        "roughness": 100.0
+      },
+      {
+        "id": "22",
+        "start": "22",
+        "end": "23",
+        "length_m": 1609.344,
+        "diameter_m": 0.30479999999999996,
+        "roughness": 100.0
+      },
+      {
+        "id": "31",
+        "start": "31",
+        "end": "32",
+        "length_m": 1609.344,
+        "diameter_m": 0.15239999999999998,
+        "roughness": 100.0
+      },
+      {
+        "id": "110",
+        "start": "2",
+        "end": "12",
+        "length_m": 60.96,
+        "diameter_m": 0.4572,
+        "roughness": 100.0
+      },
+      {
+        "id": "111",
+        "start": "11",
+        "end": "21",
+        "length_m": 1609.344,
+        "diameter_m": 0.254,
+        "roughness": 100.0
+      },
+      {
+        "id": "112",
+        "start": "12",
+        "end": "22",
+        "length_m": 1609.344,
+        "diameter_m": 0.30479999999999996,
+        "roughness": 100.0
+      },
+      {
+        "id": "113",
+        "start": "13",
+        "end": "23",
+        "length_m": 1609.344,
+        "diameter_m": 0.2032,
+        "roughness": 100.0
+      },
+      {
+        "id": "121",
+        "start": "21",
+        "end": "31",
+        "length_m": 1609.344,
+        "diameter_m": 0.2032,
+        "roughness": 100.0
+      },
+      {
+        "id": "122",
+        "start": "22",
+        "end": "32",
+        "length_m": 1609.344,
+        "diameter_m": 0.15239999999999998,
+        "roughness": 100.0
+      }
+    ],
+    "tanks": [
+      {
+        "id": "2",
+        "elevation_m": 259.08000000000004,
+        "initial_m": 36.576,
+        "min_m": 30.48,
+        "max_m": 45.72,
+        "diameter_m": 15.3924
+      }
+    ],
+    "reservoirs": [
+      {
+        "id": "9",
+        "head_m": 243.84
+      }
+    ],
+    "pumps": [
+      {
+        "id": "9",
+        "start": "9",
+        "end": "10",
+        "type": "HEAD",
+        "base_speed": 1.0,
+        "curve": [
+          [
+            0.0946352946,
+            76.2
+          ]
+        ],
+        "power_watts": null,
+        "speed_pattern": null
+      }
+    ],
+    "patterns": {
+      "1": [
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.4,
+        1.2,
+        1.0,
+        0.8,
+        0.6,
+        0.4,
+        0.6,
+        0.8
+      ]
+    },
+    "controls": [
+      "IF TANK 2 LEVEL BELOW 33.528 THEN PUMP 9 STATUS IS OPEN PRIORITY 3",
+      "IF TANK 2 LEVEL ABOVE 42.672000000000004 THEN PUMP 9 STATUS IS CLOSED PRIORITY 3"
+    ],
+    "pattern_timestep_s": 7200,
+    "pattern_start_s": 0.0,
+    "catalogue_probe_pipe_headloss_m": {
+      "10": 6.30780029296875,
+      "11": 4.895050048828125,
+      "12": 2.16131591796875,
+      "21": 1.36346435546875,
+      "22": 0.235870361328125,
+      "31": 1.094696044921875,
+      "110": 0.0628662109375,
+      "111": 6.3817138671875,
+      "112": 3.152679443359375,
+      "113": 1.219329833984375,
+      "121": 3.973419189453125,
+      "122": 5.028900146484375
+    },
+    "catalogue_probe_pump_duty": {
+      "9": 5.49862003326416
+    }
+  },
+  "contract": "Jointly choose approved pipe upgrades, repeating four-period pump speed multipliers and bounded offsets to original tank-level control thresholds. Six-hour periods repeat over 48h; each chosen pump schedule multiplies its original base speed and original speed pattern. All unselected pumps, tank initial storage, original availability conditions for decision pumps, and all other source controls and source heads remain unchanged. Tank threshold offsets shift all original simple level conditions for that tank while preserving their relation and actions. Replace approved pipes with 1.5-times diameter. All original demands and demand patterns remain; fixed demand growth 1.25 and scenario multipliers apply before pressure-dependent delivery. EPANET 2.2 finite extended-period model, 15-minute checks over the complete 48h, >=99.9% requested delivery at every positive-demand sample, demand-node pressure 25-120m, tanks within original bounds, end-level drawdown <=1m. Hydraulic energy is reported secondarily; no efficiency or monetary optimum is claimed. Do not remove controls, alter ratings, add fictitious supply or change requirements. Decision pumps use their original EPANET HEAD or POWER pump model and have no original speed pattern. Original on/off availability conditions remain. Native enable commands reset speed to 1; the compiler preserves their conditions while translating enable to a positive scheduled speed. Variable schedules also update already-open pumps with guarded rules. Closing actions and unrelated controls remain. A speed update alone cannot reopen a closed pump without an original enable condition. Rules act at 15-minute steps over the 48h horizon; the final endpoint uses the next day first period. Relative speed choices are an idealized catalogue, not a manufacturer operating certificate.",
+  "source_input_notes": [],
+  "difficulty_stratum": "coupled_design"
+}
